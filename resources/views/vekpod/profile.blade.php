@@ -12,7 +12,7 @@
                 <span class="clear hidden-folded p-x p-y-xs"><span
                         class="block _500 text-ellipsis">Rachel Platten</span></span></a>
             <div class="dropdown-menu w dropdown-menu-scale"><a class="dropdown-item"
-                                                                href="{{url('profile')}}"#profile"><span>Profile</span></a>
+                                                                href="{{url('profile')}}#profile"><span>Profile</span></a>
                 <a class="dropdown-item" href="{{url('profile')}}"#tracks"><span>Tracks</span></a> <a
                     class="dropdown-item" href="{{url('profile')}}"#playlists"><span>Playlists</span></a> <a
                     class="dropdown-item" href="{{url('profile')}}"#likes"><span>Likes</span></a>
