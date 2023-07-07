@@ -47,8 +47,8 @@
                     </div>
                     <div class="col-lg-8 text-center">
                         <div class="p-a-lg">
-                            <h2 class="display-4 m-y-lg">A simple, fast and responsive music template</h2>
-                            <h6 class="text-muted m-b-lg">HTML5 Music Template</h6>
+                            <h2 class="display-4 m-y-lg">A simple and fast Podcasting site</h2>
+                            <h6 class="text-muted m-b-lg">Try now for free</h6>
                             <a href="{{url('home')}}" class="btn circle btn-outline b-primary m-b-lg p-x-md">Get it now</a>
                         </div>
                     </div>
@@ -60,8 +60,8 @@
                     </div>
                     <div class="col-lg-8 text-center">
                         <div class="p-a-lg">
-                            <h2 class="display-4 m-y-lg">Bootstrap 4 CSS framework</h2>
-                            <h6 class="text-muted m-b-lg">Responsive layout</h6>
+                            <h2 class="display-4 m-y-lg">Podcasting has never been so easy</h2>
+                            <h6 class="text-muted m-b-lg">Register for free</h6>
                             <a href="{{url('player')}}" class="btn circle btn-outline b-primary m-b-lg p-x-md">View App</a>
                         </div>
                     </div>
@@ -74,8 +74,8 @@
 
                     </div>
                     <div class="col-lg-8 text-center">
-                        <div class="p-a-lg"><h2 class="display-4 m-y-lg">Ajax powered page switch with great experience</h2>
-                            <h6 class="text-muted m-b-lg">No refresh page when switching pages</h6>
+                        <div class="p-a-lg"><h2 class="display-4 m-y-lg">Listen to your favorite podcast on the go</h2>
+                            <h6 class="text-muted m-b-lg">No hustles, No fees. Completly free</h6>
                             <a href="{{url('rtl')}}" class="btn circle btn-outline b-primary m-b-lg p-x-md">Get RTL</a>
                         </div>
                     </div>
@@ -88,7 +88,7 @@
                 <div class="col-sm-6">
                     <div class="black cover cover-gd" style="background-image: url('{{asset('assets/images/b1.jpg')}}')">
                         <div class="p-a-lg text-center">
-                            <h3 class="display-3 m-y-lg">Music</h3>
+                            <h3 class="display-3 m-y-lg">Podcasts</h3>
                             <p class="text-muted text-md m-b-lg">Get ready for high sound quality.</p>
                             <a href="{{url('player')}}" class="btn circle white m-b-lg p-x-md">Try Free</a>
                         </div>
@@ -97,9 +97,9 @@
                 <div class="col-sm-6 black lt">
                     <div class="black cover cover-gd" style="background-image: url('{{asset('assets/images/b7.jpg')}}')">
                         <div class="p-a-lg text-center">
-                            <h3 class="display-3 m-y-lg">Artists</h3>
-                            <p class="text-muted text-md m-b-lg">Listen to your favorite Artists.</p>
-                            <a href="{{url('home')}}" class="btn circle white m-b-lg p-x-md">View Artists</a>
+                            <h3 class="display-3 m-y-lg">Podcasters</h3>
+                            <p class="text-muted text-md m-b-lg">Listen to your favorite podcaster.</p>
+                            <a href="{{url('home')}}" class="btn circle white m-b-lg p-x-md">View podcasters</a>
                         </div>
                     </div>
                 </div>
@@ -110,8 +110,8 @@
                 </div>
                 <div class="col-md-6">
                     <div class="p-a-lg text-center">
-                        <h3 class="display-4 m-y-lg">Light, Grey, Dark, Black themes</h3>
-                        <p class="text-muted text-md m-b-lg">Config any blocks with any colors</p>
+                        <h3 class="display-4 m-y-lg">Reinvent your podcasting carrer</h3>
+                        <p class="text-muted text-md m-b-lg">Get started today with a free account</p>
                         <a href="{{url('home')}}" class="btn circle btn-outline b-black m-b-lg p-x-md">Try Settings</a>
                     </div>
                 </div>
@@ -157,7 +157,7 @@
                                         <path d="M 14 24 L 24 24 L 14 44 Z" fill="#FFFFFF"/>
                                         <circle cx="24" cy="24" r="3" fill="#000000"/></svg>
                                     <img src="{{asset('assets/images/logo.png')}}" alt="." class="hide">
-                                    <span class="hidden-folded inline">pulse</span>
+                                    <span class="hidden-folded inline">Vekpod</span>
                                 </a>
                             </div>
                         </div>
@@ -168,13 +168,13 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">About us</a>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="#">Mobile apps</a>
-                                    </li>
+{{--                                    <li class="nav-item"><a class="nav-link" href="#">Mobile apps</a>--}}
+{{--                                    </li>--}}
                                     <li class="nav-item"><a class="nav-link" href="#">Blog</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Jobs</a>
-                                    </li>
+{{--                                    <li class="nav-item">--}}
+{{--                                        <a class="nav-link" href="#">Jobs</a>--}}
+{{--                                    </li>--}}
                                 </ul>
                             </div>
                         </div>
@@ -198,13 +198,13 @@
                             <h6 class="text-u-c m-b text-muted">Connect</h6>
                             <div class="m-b-md"><ul class="nav l-h-2x _600">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Facebook</a>
+                                        <a class="nav-link" href="https://www.facebook.com/">Facebook</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Twitter</a>
+                                        <a class="nav-link" href="https://twitter.com/i/flow/login?redirect_after_login=%2Flogin%3Flang%3Den">Twitter</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Google+</a>
+                                        <a class="nav-link" href="https://accounts.google.com/v3/signin/identifier?dsh=S1325770267%3A1688715339123031&ifkv=AeDOFXisqAdJQ5x3NrvI89gpbZEKiDFpSLIgL5dYbQ79O2KpU81pzAVfvfRioIkPQxu7WD_SzmrC&ltmpl=mobNH&flowName=GlifWebSignIn&flowEntry=ServiceLogin">Google+</a>
                                     </li>
                                 </ul>
                             </div>

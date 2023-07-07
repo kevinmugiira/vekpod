@@ -48,13 +48,13 @@
             <div class="row-col">
                 <div class="col-lg-9 b-r no-border-md">
                     <div class="padding"><h6 class="m-b"><span class="text-muted">by</span> <a
-                                href="{{url('artist-detail')}}" data-pjax class="item-author _600">Rachel Platten</a> <span
+                                href="{{url('detail')}}" data-pjax class="item-author _600">Rachel Platten</a> <span
                                 class="text-muted text-sm">- 10 song, 50 min 32 sec</span></h6>
                         <div id="tracks" class="row item-list item-list-xs item-list-li m-b">
                             <div class="col-xs-12">
                                 <div class="item r" data-id="item-10"
                                      data-src="http://api.soundcloud.com/tracks/237514750/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                    <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
+                                    <div class="item-media"><a href="{{url('track')}}" class="item-media-content"
                                                                style="background-image: url('{{asset('assets/images/b9.jpg')}}')"></a>
                                         <div class="item-overlay center">
                                             <button class="btn-playpause">Play</button>
@@ -68,10 +68,10 @@
                                                     class="fa fa-ellipsis-h"></i></a>
                                             <div class="dropdown-menu pull-right black lt"></div>
                                         </div>
-                                        <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">The Open
+                                        <div class="item-title text-ellipsis"><a href="{{url('track')}}">The Open
                                                 Road</a></div>
                                         <div class="item-author text-sm text-ellipsis hide"><a
-                                                href="{{url('artist-detail')}}" class="text-muted">Postiljonen</a></div>
+                                                href="{{url('detail')}}" class="text-muted">Postiljonen</a></div>
                                         <div class="item-meta text-sm text-muted"><span
                                                 class="item-meta-right">5:20</span></div>
                                     </div>
@@ -80,7 +80,7 @@
                             <div class="col-xs-12">
                                 <div class="item r" data-id="item-8"
                                      data-src="http://api.soundcloud.com/tracks/236288744/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                    <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
+                                    <div class="item-media"><a href="{{url('track')}}" class="item-media-content"
                                                                style="background-image: url('{{asset('assets/images/b7.jpg')}}')"></a>
                                         <div class="item-overlay center">
                                             <button class="btn-playpause">Play</button>
@@ -94,10 +94,10 @@
                                                     class="fa fa-ellipsis-h"></i></a>
                                             <div class="dropdown-menu pull-right black lt"></div>
                                         </div>
-                                        <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Simple
+                                        <div class="item-title text-ellipsis"><a href="{{url('track')}}">Simple
                                                 Place To Be</a></div>
                                         <div class="item-author text-sm text-ellipsis hide"><a
-                                                href="{{url('artist-detail')}}" class="text-muted">RYD</a></div>
+                                                href="{{url('detail')}}" class="text-muted">RYD</a></div>
                                         <div class="item-meta text-sm text-muted"><span
                                                 class="item-meta-right">4:20</span></div>
                                     </div>
@@ -106,7 +106,7 @@
                             <div class="col-xs-12">
                                 <div class="item r" data-id="item-7"
                                      data-src="http://api.soundcloud.com/tracks/245566366/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                    <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
+                                    <div class="item-media"><a href="{{url('track')}}" class="item-media-content"
                                                                style="background-image: url('{{asset('assets/images/b6.jpg')}}')"></a>
                                         <div class="item-overlay center">
                                             <button class="btn-playpause">Play</button>
@@ -120,10 +120,10 @@
                                                     class="fa fa-ellipsis-h"></i></a>
                                             <div class="dropdown-menu pull-right black lt"></div>
                                         </div>
-                                        <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Reflection
+                                        <div class="item-title text-ellipsis"><a href="{{url('track')}}">Reflection
                                                 (Deluxe)</a></div>
                                         <div class="item-author text-sm text-ellipsis hide"><a
-                                                href="{{url('artist-detail')}}" class="text-muted">Fifth Harmony</a></div>
+                                                href="{{url('detail')}}" class="text-muted">Fifth Harmony</a></div>
                                         <div class="item-meta text-sm text-muted"><span
                                                 class="item-meta-right">5:05</span></div>
                                     </div>
@@ -132,7 +132,7 @@
                             <div class="col-xs-12">
                                 <div class="item r" data-id="item-3"
                                      data-src="http://api.soundcloud.com/tracks/79031167/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                    <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
+                                    <div class="item-media"><a href="{{url('track')}}" class="item-media-content"
                                                                style="background-image: url('{{asset('assets/images/b2.jpg')}}')"></a>
                                         <div class="item-overlay center">
                                             <button class="btn-playpause">Play</button>
@@ -146,10 +146,10 @@
                                                     class="fa fa-ellipsis-h"></i></a>
                                             <div class="dropdown-menu pull-right black lt"></div>
                                         </div>
-                                        <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">I Wanna Be
+                                        <div class="item-title text-ellipsis"><a href="{{url('track')}}">I Wanna Be
                                                 In the Cavalry</a></div>
                                         <div class="item-author text-sm text-ellipsis hide"><a
-                                                href="{{url('artist-detail')}}" class="text-muted">Jeremy Scott</a></div>
+                                                href="{{url('detail')}}" class="text-muted">Jeremy Scott</a></div>
                                         <div class="item-meta text-sm text-muted"><span
                                                 class="item-meta-right">2:50</span></div>
                                     </div>
@@ -158,7 +158,7 @@
                             <div class="col-xs-12">
                                 <div class="item r" data-id="item-11"
                                      data-src="http://api.soundcloud.com/tracks/218060449/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                    <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
+                                    <div class="item-media"><a href="{{url('track')}}" class="item-media-content"
                                                                style="background-image: url('{{asset('assets/images/b10.jpg')}}')"></a>
                                         <div class="item-overlay center">
                                             <button class="btn-playpause">Play</button>
@@ -172,10 +172,10 @@
                                                     class="fa fa-ellipsis-h"></i></a>
                                             <div class="dropdown-menu pull-right black lt"></div>
                                         </div>
-                                        <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Spring</a>
+                                        <div class="item-title text-ellipsis"><a href="{{url('track')}}">Spring</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis hide"><a
-                                                href="{{url('artist-detail')}}" class="text-muted">Pablo Nouvelle</a>
+                                                href="{{url('detail')}}" class="text-muted">Pablo Nouvelle</a>
                                         </div>
                                         <div class="item-meta text-sm text-muted"><span
                                                 class="item-meta-right">3:10</span></div>
@@ -185,7 +185,7 @@
                             <div class="col-xs-12">
                                 <div class="item r" data-id="item-6"
                                      data-src="http://api.soundcloud.com/tracks/236107824/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                    <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
+                                    <div class="item-media"><a href="{{url('track')}}" class="item-media-content"
                                                                style="background-image: url('{{asset('assets/images/b5.jpg')}}')"></a>
                                         <div class="item-overlay center">
                                             <button class="btn-playpause">Play</button>
@@ -199,10 +199,10 @@
                                                     class="fa fa-ellipsis-h"></i></a>
                                             <div class="dropdown-menu pull-right black lt"></div>
                                         </div>
-                                        <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Body on
+                                        <div class="item-title text-ellipsis"><a href="{{url('track')}}">Body on
                                                 me</a></div>
                                         <div class="item-author text-sm text-ellipsis hide"><a
-                                                href="{{url('artist-detail')}}" class="text-muted">Rita Ora</a></div>
+                                                href="{{url('detail')}}" class="text-muted">Rita Ora</a></div>
                                         <div class="item-meta text-sm text-muted"><span
                                                 class="item-meta-right">3:55</span></div>
                                     </div>
@@ -211,7 +211,7 @@
                             <div class="col-xs-12">
                                 <div class="item r" data-id="item-1"
                                      data-src="http://api.soundcloud.com/tracks/269944843/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                    <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
+                                    <div class="item-media"><a href="{{url('track')}}" class="item-media-content"
                                                                style="background-image: url('{{asset('assets/images/b0.jpg')}}')"></a>
                                         <div class="item-overlay center">
                                             <button class="btn-playpause">Play</button>
@@ -225,10 +225,10 @@
                                                     class="fa fa-ellipsis-h"></i></a>
                                             <div class="dropdown-menu pull-right black lt"></div>
                                         </div>
-                                        <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Pull
+                                        <div class="item-title text-ellipsis"><a href="{{url('track')}}">Pull
                                                 Up</a></div>
                                         <div class="item-author text-sm text-ellipsis hide"><a
-                                                href="{{url('artist-detail')}}" class="text-muted">Summerella</a></div>
+                                                href="{{url('detail')}}" class="text-muted">Summerella</a></div>
                                         <div class="item-meta text-sm text-muted"><span
                                                 class="item-meta-right">2:50</span></div>
                                     </div>
@@ -237,7 +237,7 @@
                             <div class="col-xs-12">
                                 <div class="item r" data-id="item-12"
                                      data-src="http://api.soundcloud.com/tracks/174495152/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                    <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
+                                    <div class="item-media"><a href="{{url('track')}}" class="item-media-content"
                                                                style="background-image: url('{{asset('assets/images/b11.jpg')}}')"></a>
                                         <div class="item-overlay center">
                                             <button class="btn-playpause">Play</button>
@@ -251,10 +251,10 @@
                                                     class="fa fa-ellipsis-h"></i></a>
                                             <div class="dropdown-menu pull-right black lt"></div>
                                         </div>
-                                        <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Happy
+                                        <div class="item-title text-ellipsis"><a href="{{url('track')}}">Happy
                                                 ending</a></div>
                                         <div class="item-author text-sm text-ellipsis hide"><a
-                                                href="{{url('artist-detail')}}" class="text-muted">Postiljonen</a></div>
+                                                href="{{url('detail')}}" class="text-muted">Postiljonen</a></div>
                                         <div class="item-meta text-sm text-muted"><span
                                                 class="item-meta-right">5:20</span></div>
                                     </div>
@@ -263,7 +263,7 @@
                             <div class="col-xs-12">
                                 <div class="item r" data-id="item-5"
                                      data-src="http://streaming.radionomy.com/JamendoLounge">
-                                    <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
+                                    <div class="item-media"><a href="{{url('track')}}" class="item-media-content"
                                                                style="background-image: url('{{asset('assets/images/b4.jpg')}}')"></a>
                                         <div class="item-overlay center">
                                             <button class="btn-playpause">Play</button>
@@ -277,10 +277,10 @@
                                                     class="fa fa-ellipsis-h"></i></a>
                                             <div class="dropdown-menu pull-right black lt"></div>
                                         </div>
-                                        <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Live
+                                        <div class="item-title text-ellipsis"><a href="{{url('track')}}">Live
                                                 Radio</a></div>
                                         <div class="item-author text-sm text-ellipsis hide"><a
-                                                href="{{url('artist-detail')}}" class="text-muted">Radionomy</a></div>
+                                                href="{{url('detail')}}" class="text-muted">Radionomy</a></div>
                                         <div class="item-meta text-sm text-muted"><span
                                                 class="item-meta-right">3:35</span></div>
                                     </div>
@@ -289,7 +289,7 @@
                             <div class="col-xs-12">
                                 <div class="item r" data-id="item-4"
                                      data-src="http://api.soundcloud.com/tracks/230791292/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                    <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
+                                    <div class="item-media"><a href="{{url('track')}}" class="item-media-content"
                                                                style="background-image: url('{{asset('assets/images/b3.jpg')}}')"></a>
                                         <div class="item-overlay center">
                                             <button class="btn-playpause">Play</button>
@@ -303,10 +303,10 @@
                                                     class="fa fa-ellipsis-h"></i></a>
                                             <div class="dropdown-menu pull-right black lt"></div>
                                         </div>
-                                        <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">What A
+                                        <div class="item-title text-ellipsis"><a href="{{url('track')}}">What A
                                                 Time To Be Alive</a></div>
                                         <div class="item-author text-sm text-ellipsis hide"><a
-                                                href="{{url('artist-detail')}}" class="text-muted">Judith Garcia</a></div>
+                                                href="{{url('detail')}}" class="text-muted">Judith Garcia</a></div>
                                         <div class="item-meta text-sm text-muted"><span
                                                 class="item-meta-right">6:00</span></div>
                                     </div>
@@ -318,7 +318,7 @@
                             <div class="col-xs-6 col-sm-6 col-md-3">
                                 <div class="item r" data-id="item-2"
                                      data-src="http://api.soundcloud.com/tracks/259445397/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                    <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
+                                    <div class="item-media"><a href="{{url('track')}}" class="item-media-content"
                                                                style="background-image: url('{{asset('assets/images/b1.jpg')}}')"></a>
                                         <div class="item-overlay center">
                                             <button class="btn-playpause">Play</button>
@@ -333,9 +333,9 @@
                                             <div class="dropdown-menu pull-right black lt"></div>
                                         </div>
                                         <div class="item-title text-ellipsis"><a
-                                                href="{{url('track-detail')}}">Fireworks</a></div>
+                                                href="{{url('track')}}">Fireworks</a></div>
                                         <div class="item-author text-sm text-ellipsis hide"><a
-                                                href="{{url('artist-detail')}}" class="text-muted">Kygo</a></div>
+                                                href="{{url('detail')}}" class="text-muted">Kygo</a></div>
                                         <div class="item-meta text-sm text-muted"><span
                                                 class="item-meta-stats text-xs"><i
                                                     class="fa fa-play text-muted"></i> 30 <i
@@ -346,7 +346,7 @@
                             <div class="col-xs-6 col-sm-6 col-md-3">
                                 <div class="item r" data-id="item-8"
                                      data-src="http://api.soundcloud.com/tracks/236288744/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                    <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
+                                    <div class="item-media"><a href="{{url('track')}}" class="item-media-content"
                                                                style="background-image: url('{{asset('assets/images/b7.jpg')}}')"></a>
                                         <div class="item-overlay center">
                                             <button class="btn-playpause">Play</button>
@@ -360,10 +360,10 @@
                                                     class="fa fa-ellipsis-h"></i></a>
                                             <div class="dropdown-menu pull-right black lt"></div>
                                         </div>
-                                        <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Simple
+                                        <div class="item-title text-ellipsis"><a href="{{url('track')}}">Simple
                                                 Place To Be</a></div>
                                         <div class="item-author text-sm text-ellipsis hide"><a
-                                                href="{{url('artist-detail')}}" class="text-muted">RYD</a></div>
+                                                href="{{url('detail')}}" class="text-muted">RYD</a></div>
                                         <div class="item-meta text-sm text-muted"><span
                                                 class="item-meta-stats text-xs"><i
                                                     class="fa fa-play text-muted"></i> 400 <i
@@ -374,7 +374,7 @@
                             <div class="col-xs-6 col-sm-6 col-md-3">
                                 <div class="item r" data-id="item-12"
                                      data-src="http://api.soundcloud.com/tracks/174495152/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                    <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
+                                    <div class="item-media"><a href="{{url('track')}}" class="item-media-content"
                                                                style="background-image: url('{{asset('assets/images/b11.jpg')}}')"></a>
                                         <div class="item-overlay center">
                                             <button class="btn-playpause">Play</button>
@@ -388,10 +388,10 @@
                                                     class="fa fa-ellipsis-h"></i></a>
                                             <div class="dropdown-menu pull-right black lt"></div>
                                         </div>
-                                        <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Happy
+                                        <div class="item-title text-ellipsis"><a href="{{url('track')}}">Happy
                                                 ending</a></div>
                                         <div class="item-author text-sm text-ellipsis hide"><a
-                                                href="{{url('artist-detail')}}" class="text-muted">Postiljonen</a></div>
+                                                href="{{url('detail')}}" class="text-muted">Postiljonen</a></div>
                                         <div class="item-meta text-sm text-muted"><span
                                                 class="item-meta-stats text-xs"><i
                                                     class="fa fa-play text-muted"></i> 860 <i
@@ -402,7 +402,7 @@
                             <div class="col-xs-6 col-sm-6 col-md-3">
                                 <div class="item r" data-id="item-4"
                                      data-src="http://api.soundcloud.com/tracks/230791292/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                    <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
+                                    <div class="item-media"><a href="{{url('track')}}" class="item-media-content"
                                                                style="background-image: url('{{asset('assets/images/b3.jpg')}}')"></a>
                                         <div class="item-overlay center">
                                             <button class="btn-playpause">Play</button>
@@ -416,10 +416,10 @@
                                                     class="fa fa-ellipsis-h"></i></a>
                                             <div class="dropdown-menu pull-right black lt"></div>
                                         </div>
-                                        <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">What A
+                                        <div class="item-title text-ellipsis"><a href="{{url('track')}}">What A
                                                 Time To Be Alive</a></div>
                                         <div class="item-author text-sm text-ellipsis hide"><a
-                                                href="{{url('artist-detail')}}" class="text-muted">Judith Garcia</a></div>
+                                                href="{{url('detail')}}" class="text-muted">Judith Garcia</a></div>
                                         <div class="item-meta text-sm text-muted"><span
                                                 class="item-meta-stats text-xs"><i
                                                     class="fa fa-play text-muted"></i> 320 <i
@@ -514,13 +514,13 @@
                             <div class="col-xs-12">
                                 <div class="item r" data-id="item-3"
                                      data-src="http://api.soundcloud.com/tracks/79031167/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                    <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
+                                    <div class="item-media"><a href="{{url('track')}}" class="item-media-content"
                                                                style="background-image: url('{{asset('assets/images/b2.jpg')}}')"></a>
                                     </div>
                                     <div class="item-info">
-                                        <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">I Wanna Be
+                                        <div class="item-title text-ellipsis"><a href="{{url('track')}}">I Wanna Be
                                                 In the Cavalry</a></div>
-                                        <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"
+                                        <div class="item-author text-sm text-ellipsis"><a href="{{url('detail')}}"
                                                                                           class="text-muted">Jeremy
                                                 Scott</a></div>
                                     </div>
@@ -529,13 +529,13 @@
                             <div class="col-xs-12">
                                 <div class="item r" data-id="item-6"
                                      data-src="http://api.soundcloud.com/tracks/236107824/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                    <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
+                                    <div class="item-media"><a href="{{url('track')}}" class="item-media-content"
                                                                style="background-image: url('{{asset('assets/images/b5.jpg')}}')"></a>
                                     </div>
                                     <div class="item-info">
-                                        <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Body on
+                                        <div class="item-title text-ellipsis"><a href="{{url('track')}}">Body on
                                                 me</a></div>
-                                        <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"
+                                        <div class="item-author text-sm text-ellipsis"><a href="{{url('detail')}}"
                                                                                           class="text-muted">Rita
                                                 Ora</a></div>
                                     </div>
@@ -544,13 +544,13 @@
                             <div class="col-xs-12">
                                 <div class="item r" data-id="item-5"
                                      data-src="http://streaming.radionomy.com/JamendoLounge">
-                                    <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
+                                    <div class="item-media"><a href="{{url('track')}}" class="item-media-content"
                                                                style="background-image: url('{{asset('assets/images/b4.jpg')}}')"></a>
                                     </div>
                                     <div class="item-info">
-                                        <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Live
+                                        <div class="item-title text-ellipsis"><a href="{{url('track')}}">Live
                                                 Radio</a></div>
-                                        <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"
+                                        <div class="item-author text-sm text-ellipsis"><a href="{{url('detail')}}"
                                                                                           class="text-muted">Radionomy</a>
                                         </div>
                                     </div>
@@ -559,13 +559,13 @@
                             <div class="col-xs-12">
                                 <div class="item r" data-id="item-7"
                                      data-src="http://api.soundcloud.com/tracks/245566366/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                    <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
+                                    <div class="item-media"><a href="{{url('track')}}" class="item-media-content"
                                                                style="background-image: url('{{asset('assets/images/b6.jpg')}}')"></a>
                                     </div>
                                     <div class="item-info">
-                                        <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Reflection
+                                        <div class="item-title text-ellipsis"><a href="{{url('track')}}">Reflection
                                                 (Deluxe)</a></div>
-                                        <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"
+                                        <div class="item-author text-sm text-ellipsis"><a href="{{url('detail')}}"
                                                                                           class="text-muted">Fifth
                                                 Harmony</a></div>
                                     </div>
@@ -574,13 +574,13 @@
                             <div class="col-xs-12">
                                 <div class="item r" data-id="item-12"
                                      data-src="http://api.soundcloud.com/tracks/174495152/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                    <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
+                                    <div class="item-media"><a href="{{url('track')}}" class="item-media-content"
                                                                style="background-image: url('{{asset('assets/images/b11.jpg')}}')"></a>
                                     </div>
                                     <div class="item-info">
-                                        <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Happy
+                                        <div class="item-title text-ellipsis"><a href="{{url('track')}}">Happy
                                                 ending</a></div>
-                                        <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"
+                                        <div class="item-author text-sm text-ellipsis"><a href="{{url('detail')}}"
                                                                                           class="text-muted">Postiljonen</a>
                                         </div>
                                     </div>
@@ -689,15 +689,15 @@
                                         <div class="col-xs-12">
                                             <div class="item r" data-id="item-3"
                                                  data-src="http://api.soundcloud.com/tracks/79031167/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                                <div class="item-media"><a href="{{url('track-detail')}}"
+                                                <div class="item-media"><a href="{{url('track')}}"
                                                                            class="item-media-content"
                                                                            style="background-image: url('{{asset('assets/images/b2.jpg')}}')"></a>
                                                 </div>
                                                 <div class="item-info">
-                                                    <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">I
+                                                    <div class="item-title text-ellipsis"><a href="{{url('track')}}">I
                                                             Wanna Be In the Cavalry</a></div>
                                                     <div class="item-author text-sm text-ellipsis"><a
-                                                            href="{{url('artist-detail')}}" class="text-muted">Jeremy
+                                                            href="{{url('detail')}}" class="text-muted">Jeremy
                                                             Scott</a></div>
                                                     <div class="item-meta text-sm text-muted"></div>
                                                 </div>
@@ -706,15 +706,15 @@
                                         <div class="col-xs-12">
                                             <div class="item r" data-id="item-8"
                                                  data-src="http://api.soundcloud.com/tracks/236288744/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                                <div class="item-media"><a href="{{url('track-detail')}}"
+                                                <div class="item-media"><a href="{{url('track')}}"
                                                                            class="item-media-content"
                                                                            style="background-image: url('{{asset('assets/images/b7.jpg')}}')"></a>
                                                 </div>
                                                 <div class="item-info">
-                                                    <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Simple
+                                                    <div class="item-title text-ellipsis"><a href="{{url('track')}}">Simple
                                                             Place To Be</a></div>
                                                     <div class="item-author text-sm text-ellipsis"><a
-                                                            href="{{url('artist-detail')}}" class="text-muted">RYD</a></div>
+                                                            href="{{url('detail')}}" class="text-muted">RYD</a></div>
                                                     <div class="item-meta text-sm text-muted"></div>
                                                 </div>
                                             </div>
@@ -722,15 +722,15 @@
                                         <div class="col-xs-12">
                                             <div class="item r" data-id="item-12"
                                                  data-src="http://api.soundcloud.com/tracks/174495152/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                                <div class="item-media"><a href="{{url('track-detail')}}"
+                                                <div class="item-media"><a href="{{url('track')}}"
                                                                            class="item-media-content"
                                                                            style="background-image: url('{{asset('assets/images/b11.jpg')}}')"></a>
                                                 </div>
                                                 <div class="item-info">
-                                                    <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Happy
+                                                    <div class="item-title text-ellipsis"><a href="{{url('track')}}">Happy
                                                             ending</a></div>
                                                     <div class="item-author text-sm text-ellipsis"><a
-                                                            href="{{url('artist-detail')}}" class="text-muted">Postiljonen</a>
+                                                            href="{{url('detail')}}" class="text-muted">Postiljonen</a>
                                                     </div>
                                                     <div class="item-meta text-sm text-muted"></div>
                                                 </div>
@@ -739,15 +739,15 @@
                                         <div class="col-xs-12">
                                             <div class="item r" data-id="item-10"
                                                  data-src="http://api.soundcloud.com/tracks/237514750/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                                <div class="item-media"><a href="{{url('track-detail')}}"
+                                                <div class="item-media"><a href="{{url('track')}}"
                                                                            class="item-media-content"
                                                                            style="background-image: url('{{asset('assets/images/b9.jpg')}}')"></a>
                                                 </div>
                                                 <div class="item-info">
-                                                    <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">The
+                                                    <div class="item-title text-ellipsis"><a href="{{url('track')}}">The
                                                             Open Road</a></div>
                                                     <div class="item-author text-sm text-ellipsis"><a
-                                                            href="{{url('artist-detail')}}" class="text-muted">Postiljonen</a>
+                                                            href="{{url('detail')}}" class="text-muted">Postiljonen</a>
                                                     </div>
                                                     <div class="item-meta text-sm text-muted"></div>
                                                 </div>
@@ -759,12 +759,12 @@
                                     <div class="row item-list item-list-sm item-list-by m-b">
                                         <div class="col-xs-12">
                                             <div class="item">
-                                                <div class="item-media rounded"><a href="{{url('artist-detail')}}"
+                                                <div class="item-media rounded"><a href="{{url('detail')}}"
                                                                                    class="item-media-content"
                                                                                    style="background-image: url('{{asset('assets/images/a0.jpg')}}')"></a>
                                                 </div>
                                                 <div class="item-info">
-                                                    <div class="item-title text-ellipsis"><a href="{{url('artist-detail')}}">Crystal
+                                                    <div class="item-title text-ellipsis"><a href="{{url('detail')}}">Crystal
                                                             Guerrero</a>
                                                         <div class="text-sm text-muted">12 songs</div>
                                                     </div>
@@ -773,12 +773,12 @@
                                         </div>
                                         <div class="col-xs-12">
                                             <div class="item">
-                                                <div class="item-media rounded"><a href="{{url('artist-detail')}}"
+                                                <div class="item-media rounded"><a href="{{url('detail')}}"
                                                                                    class="item-media-content"
                                                                                    style="background-image: url('{{asset('assets/images/a5.jpg')}}')"></a>
                                                 </div>
                                                 <div class="item-info">
-                                                    <div class="item-title text-ellipsis"><a href="{{url('artist-detail')}}">Judy
+                                                    <div class="item-title text-ellipsis"><a href="{{url('detail')}}">Judy
                                                             Woods</a>
                                                         <div class="text-sm text-muted">23 songs</div>
                                                     </div>
@@ -787,12 +787,12 @@
                                         </div>
                                         <div class="col-xs-12">
                                             <div class="item">
-                                                <div class="item-media rounded"><a href="{{url('artist-detail')}}"
+                                                <div class="item-media rounded"><a href="{{url('detail')}}"
                                                                                    class="item-media-content"
                                                                                    style="background-image: url('{{asset('assets/images/a3.jpg')}}')"></a>
                                                 </div>
                                                 <div class="item-info">
-                                                    <div class="item-title text-ellipsis"><a href="{{url('artist-detail')}}">Joe
+                                                    <div class="item-title text-ellipsis"><a href="{{url('detail')}}">Joe
                                                             Holmes</a>
                                                         <div class="text-sm text-muted">24 songs</div>
                                                     </div>
@@ -801,12 +801,12 @@
                                         </div>
                                         <div class="col-xs-12">
                                             <div class="item">
-                                                <div class="item-media rounded"><a href="{{url('artist-detail')}}"
+                                                <div class="item-media rounded"><a href="{{url('detail')}}"
                                                                                    class="item-media-content"
                                                                                    style="background-image: url('{{asset('assets/images/a8.jpg')}}')"></a>
                                                 </div>
                                                 <div class="item-info">
-                                                    <div class="item-title text-ellipsis"><a href="{{url('artist-detail')}}">Sara
+                                                    <div class="item-title text-ellipsis"><a href="{{url('detail')}}">Sara
                                                             King</a>
                                                         <div class="text-sm text-muted">14 songs</div>
                                                     </div>

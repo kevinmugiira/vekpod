@@ -63,7 +63,7 @@
             </li>
             <li class="nav-item">
                 <a href="{{url('artist')}}" class="nav-link">
-                    <span class="nav-text">Artists</span>
+                    <span class="nav-text">Podcasters</span>
                 </a>
             </li>
         </ul>
@@ -116,7 +116,7 @@
                                         <a href="track.detail.html">New Album from Nouvelle</a>
                                     </div>
                                     <div class="item-author text-sm text-ellipsis">
-                                        <a href="artist.detail.html" class="text-muted">Nouvelle</a>
+                                        <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Nouvelle</a>
                                     </div>
                                 </div>
                             </div>
@@ -147,7 +147,7 @@
                                         <a href="track.detail.html">Blind Me</a>
                                     </div>
                                     <div class="item-author text-sm text-ellipsis">
-                                        <a href="artist.detail.html" class="text-muted">Fifty</a>
+                                        <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Fifty</a>
                                     </div>
                                 </div>
                             </div>
@@ -175,10 +175,10 @@
                                         </div>
                                     </div>
                                     <div class="item-title text-ellipsis">
-                                        <a href="track.detail.html">New Track from Pablo Nouvelle</a>
+                                        <a href="{{url('artist-detail')}}">New Track from Pablo Nouvelle</a>
                                     </div>
                                     <div class="item-author text-sm text-ellipsis">
-                                        <a href="artist.detail.html" class="text-muted">Pablo Nouvelle</a>
+                                        <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Pablo Nouvelle</a>
                                     </div>
                                 </div>
                             </div>
@@ -214,7 +214,7 @@
                                     <a href="track.detail.html">Pull Up</a>
                                 </div>
                                 <div class="item-author text-sm text-ellipsis">
-                                    <a href="artist.detail.html" class="text-muted">Summerella</a>
+                                    <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Summerella</a>
                                 </div>
                             </div>
                         </div>
@@ -245,7 +245,7 @@
                                     <a href="track.detail.html">Fireworks</a>
                                 </div>
                                 <div class="item-author text-sm text-ellipsis">
-                                    <a href="artist.detail.html" class="text-muted">Kygo</a>
+                                    <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Kygo</a>
                                 </div>
                             </div>
                         </div>
@@ -276,7 +276,7 @@
                                     <a href="track.detail.html">I Wanna Be In the Cavalry</a>
                                 </div>
                                 <div class="item-author text-sm text-ellipsis">
-                                    <a href="artist.detail.html" class="text-muted">Jeremy Scott</a>
+                                    <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Jeremy Scott</a>
                                 </div>
                             </div>
                         </div>
@@ -308,7 +308,7 @@
                                     <a href="track.detail.html">What A Time To Be Alive</a>
                                 </div>
                                 <div class="item-author text-sm text-ellipsis">
-                                    <a href="artist.detail.html" class="text-muted">Judith Garcia</a>
+                                    <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Judith Garcia</a>
                                 </div>
                             </div>
                         </div>
@@ -360,7 +360,7 @@
                                         <div class="item-title text-ellipsis"><a href="track.detail.html">What A Time To Be Alive</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Judith Garcia</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Judith Garcia</a>
                                         </div>
                                     </div>
                                 </div>
@@ -390,7 +390,7 @@
                                             <a href="track.detail.html">Live Radio</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Radionomy</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Radionomy</a>
                                         </div>
                                     </div>
                                 </div>
@@ -426,7 +426,7 @@
                                             <a href="track.detail.html">I Wanna Be In the Cavalry</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Jeremy Scott</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Jeremy Scott</a>
                                         </div>
                                     </div>
                                 </div>
@@ -459,7 +459,7 @@
                                             <a href="track.detail.html">Body on me</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Rita Ora</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Rita Ora</a>
                                         </div>
                                     </div>
                                 </div>
@@ -494,7 +494,7 @@
                                             <a href="track.detail.html">Fireworks</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Kygo</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Kygo</a>
                                         </div>
                                     </div>
                                 </div>
@@ -528,7 +528,7 @@
                                             <a href="track.detail.html">Simple Place To Be</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">RYD</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">RYD</a>
                                         </div>
                                     </div>
                                 </div>
@@ -562,7 +562,7 @@
                                             <a href="track.detail.html">Spring</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Pablo Nouvelle</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Pablo Nouvelle</a>
                                         </div>
                                     </div>
                                 </div>
@@ -597,7 +597,7 @@
                                             <a href="track.detail.html">Happy ending</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Postiljonen</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Postiljonen</a>
                                         </div>
                                     </div>
                                 </div>
@@ -635,7 +635,7 @@
                                             <a href="track.detail.html">Simple Place To Be</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">RYD</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">RYD</a>
                                         </div>
                                     </div>
                                 </div>
@@ -670,7 +670,7 @@
                                             <a href="track.detail.html">Reflection (Deluxe)</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Fifth Harmony</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Fifth Harmony</a>
                                         </div>
                                     </div>
                                 </div>
@@ -703,7 +703,7 @@
                                             <a href="track.detail.html">The Open Road</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Postiljonen</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Postiljonen</a>
                                         </div>
                                     </div>
                                 </div>
@@ -736,7 +736,7 @@
                                             <a href="track.detail.html">Body on me</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Rita Ora</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Rita Ora</a>
                                         </div>
                                     </div>
                                 </div>
@@ -771,7 +771,7 @@
                                             <a href="track.detail.html">I Wanna Be In the Cavalry</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Jeremy Scott</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Jeremy Scott</a>
                                         </div>
                                     </div>
                                 </div>
@@ -806,7 +806,7 @@
                                             <a href="track.detail.html">Pull Up</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Summerella</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Summerella</a>
                                         </div>
                                     </div>
                                 </div>
@@ -841,7 +841,7 @@
                                             <a href="track.detail.html">What A Time To Be Alive</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Judith Garcia</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Judith Garcia</a>
                                         </div>
                                     </div>
                                 </div>
@@ -874,7 +874,7 @@
                                             <a href="track.detail.html">Live Radio</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Radionomy</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Radionomy</a>
                                         </div>
                                     </div>
                                 </div>
@@ -912,7 +912,7 @@
                                             <a href="track.detail.html">I Wanna Be In the Cavalry</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Jeremy Scott</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Jeremy Scott</a>
                                         </div>
                                     </div>
                                 </div>
@@ -947,7 +947,7 @@
                                             <a href="track.detail.html">Happy ending</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Postiljonen</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Postiljonen</a>
                                         </div>
                                     </div>
                                 </div>
@@ -982,7 +982,7 @@
                                             <a href="track.detail.html">The Open Road</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Postiljonen</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Postiljonen</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1017,7 +1017,7 @@
                                             <a href="track.detail.html">Body on me</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Rita Ora</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Rita Ora</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1051,7 +1051,7 @@
                                             <a href="track.detail.html">What A Time To Be Alive</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Judith Garcia</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Judith Garcia</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1086,7 +1086,7 @@
                                             <a href="track.detail.html">Spring</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Pablo Nouvelle</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Pablo Nouvelle</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1121,7 +1121,7 @@
                                             <a href="track.detail.html">Live Radio</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Radionomy</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Radionomy</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1156,7 +1156,7 @@
                                             <a href="track.detail.html">Simple Place To Be</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">RYD</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">RYD</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1191,7 +1191,7 @@
                                             <a href="track.detail.html">All I Need</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Pablo Nouvelle</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Pablo Nouvelle</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1226,7 +1226,7 @@
                                             <a href="track.detail.html">Reflection (Deluxe)</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Fifth Harmony</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Fifth Harmony</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1250,7 +1250,7 @@
                                             <a href="track.detail.html">Live Radio</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Radionomy</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Radionomy</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1267,7 +1267,7 @@
                                             <a href="track.detail.html">Spring</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Pablo Nouvelle</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Pablo Nouvelle</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1284,7 +1284,7 @@
                                             <a href="track.detail.html">All I Need</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Pablo Nouvelle</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Pablo Nouvelle</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1301,7 +1301,7 @@
                                             <a href="track.detail.html">Simple Place To Be</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">RYD</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">RYD</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1318,7 +1318,7 @@
                                             <a href="track.detail.html">Fireworks</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="artist.detail.html" class="text-muted">Kygo</a>
+                                            <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Kygo</a>
                                         </div>
                                     </div>
                                 </div>
@@ -1508,7 +1508,7 @@
                                                         <a href="track.detail.html">Simple Place To Be</a>
                                                     </div>
                                                     <div class="item-author text-sm text-ellipsis">
-                                                        <a href="artist.detail.html" class="text-muted">RYD</a>
+                                                        <a href="{{url('vekpod.artist-detail')}}" class="text-muted">RYD</a>
                                                     </div>
                                                     <div class="item-meta text-sm text-muted">
 
@@ -1528,7 +1528,7 @@
                                                         <a href="track.detail.html">I Wanna Be In the Cavalry</a>
                                                     </div>
                                                     <div class="item-author text-sm text-ellipsis">
-                                                        <a href="artist.detail.html" class="text-muted">Jeremy Scott</a>
+                                                        <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Jeremy Scott</a>
                                                     </div>
                                                     <div class="item-meta text-sm text-muted">
 
@@ -1548,7 +1548,7 @@
                                                         <a href="track.detail.html">Spring</a>
                                                     </div>
                                                     <div class="item-author text-sm text-ellipsis">
-                                                        <a href="artist.detail.html" class="text-muted">Pablo Nouvelle</a>
+                                                        <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Pablo Nouvelle</a>
                                                     </div>
                                                     <div class="item-meta text-sm text-muted">
 
@@ -1568,7 +1568,7 @@
                                                         <a href="track.detail.html">What A Time To Be Alive</a>
                                                     </div>
                                                     <div class="item-author text-sm text-ellipsis">
-                                                        <a href="artist.detail.html" class="text-muted">Judith Garcia</a>
+                                                        <a href="{{url('vekpod.artist-detail')}}" class="text-muted">Judith Garcia</a>
                                                     </div>
                                                     <div class="item-meta text-sm text-muted">
 
@@ -1583,13 +1583,13 @@
                                         <div class="col-xs-12">
                                             <div class="item">
                                                 <div class="item-media rounded">
-                                                    <a href="artist.detail.html" class="item-media-content" style="background-image: url('{{asset('assets/images/a0.jpg')}}')">
+                                                    <a href="{{url('vekpod.artist-detail')}}" class="item-media-content" style="background-image: url('{{asset('assets/images/a0.jpg')}}')">
 
                                                     </a>
                                                 </div>
                                                 <div class="item-info">
                                                     <div class="item-title text-ellipsis">
-                                                        <a href="artist.detail.html">Crystal Guerrero</a>
+                                                        <a href="{{url('vekpod.artist-detail')}}">Crystal Guerrero</a>
                                                         <div class="text-sm text-muted">12 songs</div>
                                                     </div>
                                                 </div>
@@ -1598,13 +1598,13 @@
                                         <div class="col-xs-12">
                                             <div class="item">
                                                 <div class="item-media rounded">
-                                                    <a href="artist.detail.html" class="item-media-content" style="background-image: url('{{asset('assets/images/a4.jpg')}}')">
+                                                    <a href="{{url('vekpod.artist-detail')}}" class="item-media-content" style="background-image: url('{{asset('assets/images/a4.jpg')}}')">
 
                                                     </a>
                                                 </div>
                                                 <div class="item-info">
                                                     <div class="item-title text-ellipsis">
-                                                        <a href="artist.detail.html">Judith Garcia</a>
+                                                        <a href="{{url('vekpod.artist-detail')}}">Judith Garcia</a>
                                                         <div class="text-sm text-muted">13 songs</div>
                                                     </div>
                                                 </div>
@@ -1613,13 +1613,13 @@
                                         <div class="col-xs-12">
                                             <div class="item">
                                                 <div class="item-media rounded">
-                                                    <a href="artist.detail.html" class="item-media-content" style="background-image: url('{{asset('assets/images/a5.jpg')}}')">
+                                                    <a href="{{url('vekpod.artist-detail')}}" class="item-media-content" style="background-image: url('{{asset('assets/images/a5.jpg')}}')">
 
                                                     </a>
                                                 </div>
                                                 <div class="item-info">
                                                     <div class="item-title text-ellipsis">
-                                                        <a href="artist.detail.html">Judy Woods</a>
+                                                        <a href="{{url('vekpod.artist-detail')}}">Judy Woods</a>
                                                         <div class="text-sm text-muted">23 songs</div>
                                                     </div>
                                                 </div>
@@ -1628,13 +1628,13 @@
                                         <div class="col-xs-12">
                                             <div class="item">
                                                 <div class="item-media rounded">
-                                                    <a href="artist.detail.html" class="item-media-content" style="background-image: url('{{asset('assets/images/a1.jpg')}}')">
+                                                    <a href="{{url('vekpod.artist-detail')}}" class="item-media-content" style="background-image: url('{{asset('assets/images/a1.jpg')}}')">
 
                                                     </a>
                                                 </div>
                                                 <div class="item-info">
                                                     <div class="item-title text-ellipsis">
-                                                        <a href="artist.detail.html">James Garcia</a>
+                                                        <a href="{{url('vekpod.artist-detail')}}">James Garcia</a>
                                                         <div class="text-sm text-muted">9 songs</div>
                                                     </div>
                                                 </div>

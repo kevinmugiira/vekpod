@@ -101,7 +101,7 @@
                         <a href="{{url('forgot-password')}}" class="_600">Forgot password?</a>
                     </div>
                     <div>Do not have an account?
-                        <a href="{{url('singup')}}" class="text-primary _600">Sign up</a>
+                        <a href="{{url('register')}}" class="text-primary _600">Sign up</a>
                     </div>
                 </div>
             </div>

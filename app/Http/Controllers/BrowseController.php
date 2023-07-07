@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Episode;
 use Illuminate\Http\Request;
 
 class BrowseController extends Controller
@@ -13,7 +15,10 @@ class BrowseController extends Controller
      */
     public function index()
     {
-        return view('vekpod.browse');
+        $category = Category::all();
+        $episodes = Episode::take(6)->get();
+//        dd($episodes->cover_image);
+        return view('vekpod.browse', compact('category', 'episodes'));
     }
 
     /**

@@ -110,7 +110,7 @@
 {{--                    <button type="submit" class="btn btn-lg black p-x-lg">Sign Up</button>--}}
                 </form>
                 <div class="p-y-lg text-center">
-                    <div>Already have an account? <a href="{{url('singin')}}" class="text-primary _600">Sign in</a></div>
+                    <div>Already have an account? <a href="{{url('login')}}" class="text-primary _600">Sign in</a></div>
                 </div>
             </div>
         </div>

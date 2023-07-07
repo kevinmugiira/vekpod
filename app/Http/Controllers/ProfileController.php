@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Episode;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
@@ -13,7 +15,16 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view('vekpod.profile');
+
+        $user = Auth::user();
+        $episode = $user->episodes();
+
+//        dd($episode->pluck('category_id'));
+//        $ep = Episode::find();
+
+//        $cat = $user->episodes()->pluck('category_id');
+
+        return view('vekpod.profile', compact('episode'));
     }
 
     /**

@@ -1,7 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Frontend;
 
+use App\Http\Controllers\Controller;
+use App\Models\Episode;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ArtistController extends Controller
@@ -13,13 +16,17 @@ class ArtistController extends Controller
      */
     public function index()
     {
-        return view('vekpod.artist');
+        $user = User::all();
+//        $episodes = Episode::user()->episodes();
+        return view('vekpod.artist', compact('user'));
     }
+
 
     public function detail()
     {
         return view('vekpod.artist-detail');
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -49,7 +56,8 @@ class ArtistController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::find($id)->episodes();
+        return view('vekpod.artist', compact('user'));
     }
 
     /**

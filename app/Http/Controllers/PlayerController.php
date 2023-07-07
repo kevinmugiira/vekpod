@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Episode;
 use Illuminate\Http\Request;
 
 class PlayerController extends Controller
@@ -13,7 +14,10 @@ class PlayerController extends Controller
      */
     public function index()
     {
-        return view('vekpod.player');
+        $episodes = Episode::take(10)->get();
+//        $image = $episodes->cover_image;
+//        dd($image);
+        return view('vekpod.player', compact('episodes'));
     }
 
     /**
