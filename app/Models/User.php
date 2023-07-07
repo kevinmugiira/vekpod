@@ -58,4 +58,14 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function podcast()
+    {
+        return $this->hasOne(Podcast::class, 'podcast_id','id');
+    }
+
+    public function episodes()
+    {
+        return $this->hasMany(Episode::class);
+    }
 }
