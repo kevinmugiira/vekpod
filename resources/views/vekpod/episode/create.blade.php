@@ -6,17 +6,9 @@
 
 
     <div class="form-control">
-
     <div class="col-md-6 offset-md-3 mt-5">
-{{--        <a target="_blank" href="https://getform.io?ref=codepenHTML">--}}
-
-{{--            <img src='https://i.imgur.com/O1cKLCn.png'>--}}
-{{--        </a>--}}
-
         <div class="form-title">
-{{--            <h4>Add Category :--}}
-{{--                <a href="{{ url('home') }}" class="btn btn-primary pull-right">Back</a>--}}
-{{--            </h4>--}}
+
         </div>
         <div class="form-body">
         <h2>Upload an Episode</h2>
@@ -39,7 +31,7 @@
 
             <div class="form-group">
                 <label for="exampleInputName">Episode Name</label>
-                <input type="text" name="name" class="form-control" id="name" placeholder="Enter episode name" required="required">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Enter episode name" value="{{old("name")}}" required="required">
             </div>
             <div class="form-group">
                 <label for="exampleInputName">Episode Description</label>
@@ -65,7 +57,7 @@
                 <input type="file" name="cover_image" id="cover_image" required="required">
             </div>
             <hr>
-            <button type="submit" class="btn btn-primary">Add Episode</button>
+            <button type="submit" class="btn btn-primary rounded">Upload Episode</button>
         </form>
     </div>
     </div>

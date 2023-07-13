@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Episode;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +16,23 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('vekpod.home');
+
+        $scienceEpisodes = Episode::where('category_id', 'Science')->paginate(6);
+        $newEpisodes = Episode::where('category_id', 'New')->get();
+        $trendingEpisodes = Episode::where('trending', 1)->get();
+        $politicalEpisodes = Episode::where('category_id', 'Politics')->get();
+        $categories = Category::all();
+
+        $currentYear = Carbon::now()->year;
+
+        return view('vekpod.home',
+            compact('trendingEpisodes',
+                'politicalEpisodes',
+                          'newEpisodes',
+                          'scienceEpisodes',
+                          'currentYear',
+                          'categories'
+            ));
     }
 
     /**

@@ -14,10 +14,13 @@ class PlayerController extends Controller
      */
     public function index()
     {
-        $episodes = Episode::take(10)->get();
+        $episodes = Episode::take(4)->get();
+        $epi = Episode::where('trending', 1)->first();
+        $byCategoryNew = Episode::where('category_id','New')->take(2)->get();
+//        dd($byCategoryNew);
 //        $image = $episodes->cover_image;
 //        dd($image);
-        return view('vekpod.player', compact('episodes'));
+        return view('vekpod.player', compact('episodes', 'epi','byCategoryNew'));
     }
 
     /**

@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Episode;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PodController extends Controller
 {
@@ -11,9 +15,17 @@ class PodController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        return view('vekpod.track-detail');
+
+        $categories = Category::all();
+        $episodes = Episode::findOrFail($id);
+
+
+        $userEpisodes = Episode::where('author', $episodes->author)->get();
+        return view('vekpod.track-detail', compact('categories', 'episodes','userEpisodes'));
+
+
     }
 
     /**
@@ -45,7 +57,8 @@ class PodController extends Controller
      */
     public function show($id)
     {
-        //
+        $episodes = Episode::find($id);
+
     }
 
     /**

@@ -18,13 +18,13 @@ class ProfileController extends Controller
 
         $user = Auth::user();
         $episode = $user->episodes();
+        $episodess = Episode::where('author', $user->name)->get();
 
-//        dd($episode->pluck('category_id'));
 //        $ep = Episode::find();
 
 //        $cat = $user->episodes()->pluck('category_id');
 
-        return view('vekpod.profile', compact('episode'));
+        return view('vekpod.profile', compact('episode','episodess'));
     }
 
     /**

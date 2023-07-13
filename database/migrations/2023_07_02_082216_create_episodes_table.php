@@ -21,9 +21,13 @@ class CreateEpisodesTable extends Migration
             $table->string('podcast_name')->nullable();
             $table->string('category_id');
             $table->string('author');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+//            $table->string('slug');
+//            $table->integer('status')->default('0');
 //            $table->foreignId('category_id');
             $table->string('file_path')->nullable();
-            $table->tinyInteger('trending')->default('0')->comment('1=trending, 0=not-trending');
+            $table->tinyInteger('trending')->default('1')->comment('1=trending, 0=not-trending');
             $table->timestamps();
         });
     }

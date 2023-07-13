@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class CategoryController extends Controller
 {
@@ -39,7 +40,7 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
         request()->validate([
-            'name'=> 'required',
+            'name'=> ['required', Rule::unique('categories','name')],
             'type' => 'required'
         ]);
 
@@ -48,7 +49,6 @@ class CategoryController extends Controller
         $category->name = $request->input('name');
         $category->description = $request->input('type');
 
-//        dd($category);
         $category->save();
 
         if ($category)

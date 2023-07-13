@@ -74,10 +74,15 @@
     <div class="b-t">
         <div class="center-block w-xxl w-auto-xs p-y-md text-center">
             <div class="p-a-md">
-                <div><a href="#" class="btn btn-block indigo text-white m-b-sm"><i class="fa fa-facebook pull-left"></i>
-                        Sign up with Facebook</a> <a href="#" class="btn btn-block red text-white"><i
-                            class="fa fa-google-plus pull-left"></i> Sign up with Google+</a></div>
-                <div class="m-y text-sm">OR</div>
+                <div>
+{{--                    <a href="#" class="btn btn-block indigo text-white m-b-sm">--}}
+{{--                        <i class="fa fa-facebook pull-left">--}}
+{{--                            --}}
+{{--                        </i> Sign up with Facebook</a>--}}
+{{--                    <a href="{{route('google-auth')}}" class="btn btn-block red text-white">--}}
+{{--                        <i class="fa fa-google-plus pull-left"></i> Sign up with Google+</a>--}}
+{{--                </div>--}}
+{{--                <div class="m-y text-sm">OR</div>--}}
                 <form method="POST" name="form" action="{{ route('register') }}">
 
                     @csrf
@@ -99,15 +104,18 @@
                         <input id="password_confirmation" name="password_confirmation" type="password" class="form-control" placeholder="Confirm Password" required>
                     </div>
 
-                    <div class="m-b-md text-sm"><span class="text-muted">By clicking Sign Up, I agree to the</span> <a
-                            href="#">Terms of service</a> <span class="text-muted">and</span> <a href="#">Policy
-                            Privacy.</a></div>
-                    <x-jet-authentication-card>
-                    <x-jet-button class="ml-4 btn btn-lg black p-x-lg"> <span>
-                        {{ __('Register') }} </span>
-                    </x-jet-button>
-                    </x-jet-authentication-card>
-{{--                    <button type="submit" class="btn btn-lg black p-x-lg">Sign Up</button>--}}
+                    <div class="m-b-md text-sm"><span class="text-muted">By clicking Register, I agree to the</span>
+                        <a href="#">Terms of service</a>
+                        <span class="text-muted">and</span>
+                        <a href="#">Policy Privacy.</a>
+                    </div>
+
+{{--                    <x-jet-authentication-card>--}}
+{{--                    <x-jet-button class="btn btn-lg black p-x-lg">--}}
+{{--                        <span> {{ __('Register') }} </span>--}}
+{{--                    </x-jet-button>--}}
+{{--                    </x-jet-authentication-card>--}}
+                    <button type="submit" class="btn btn-lg black p-x-lg">Register</button>
                 </form>
                 <div class="p-y-lg text-center">
                     <div>Already have an account? <a href="{{url('login')}}" class="text-primary _600">Sign in</a></div>

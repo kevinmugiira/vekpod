@@ -25,11 +25,11 @@
                                 <span class="nav-text">App</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="{{url('rtl')}}" class="nav-link">
-                                <span class="nav-text">Rtl</span>
-                            </a>
-                        </li>
+{{--                        <li class="nav-item">--}}
+{{--                            <a href="{{url('rtl')}}" class="nav-link">--}}
+{{--                                <span class="nav-text">Rtl</span>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
                     </ul>
                 </div>
             </div>
@@ -110,7 +110,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="p-a-lg text-center">
-                        <h3 class="display-4 m-y-lg">Reinvent your podcasting carrer</h3>
+                        <h3 class="display-4 m-y-lg">Reinvent your podcasting carrier</h3>
                         <p class="text-muted text-md m-b-lg">Get started today with a free account</p>
                         <a href="{{url('home')}}" class="btn circle btn-outline b-black m-b-lg p-x-md">Try Settings</a>
                     </div>
@@ -123,20 +123,20 @@
                 <div class="row-col">
                     <div class="col-md-4">
                         <div class="p-a-lg text-center">
-                            <h4 class="m-y-lg">One Css framework, Unlimited options &amp; variables</h4>
-                            <p class="text-muted text-md m-b-lg">Colors, layouts, components and widgets. we pre-build them for you.</p>
+                            <h4 class="m-y-lg">Stream all you want today with Vekpod</h4>
+                            <p class="text-muted text-md m-b-lg">Receive unlimited storage space for the first three months</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="p-a-lg text-center">
-                            <h4 class="m-y-lg">Two layouts, Horizontal and side navigation</h4>
-                            <p class="text-muted text-md m-b-lg">With the flexiable layout options, you can build responsive layouts.</p>
+                            <h4 class="m-y-lg">Share with others through Amazon, Google, Spotify and Sound Cloud</h4>
+                            <p class="text-muted text-md m-b-lg">Build a podcast in minutes. Registration is free</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="p-a-lg text-center">
-                            <h4 class="m-y-lg">Three templates, Landing, App, Site templates</h4>
-                            <p class="text-muted text-md m-b-lg">Choose the suitable one for your needs.</p>
+                            <h4 class="m-y-lg">Reinvent your podcasting carrier</h4>
+                            <p class="text-muted text-md m-b-lg">Choose the suitable pod style for your needs.</p>
                         </div>
                     </div>
                 </div>

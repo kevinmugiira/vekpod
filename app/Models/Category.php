@@ -26,4 +26,9 @@ class Category extends Model
     {
         return $this->hasMany(Episode::class, 'episode_id', 'id');
     }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'user_id', 'id');
+    }
 }

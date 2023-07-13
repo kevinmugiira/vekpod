@@ -58,9 +58,17 @@
 
 
 @section('content')
+
+ <div class="py-5">
+
+
     <div class="b-t">
         <div class="center-block w-xxl w-auto-xs p-y-md text-center">
             <div class="p-a-md">
+
+                @if(session('message'))
+                    <h6 class="alert alert-info mb-6">{{session('message')}}</h6>
+                @endif
 
                 @if (session('status'))
                 <div class="mb-4 font-medium text-sm text-green-600">
@@ -69,19 +77,17 @@
             @endif
 
                     <div>
-                        <a href="#" class="btn btn-block indigo text-white m-b-sm">
-                            <i class="fa fa-facebook pull-left">
+{{--                        <a href="#" class="btn btn-block indigo text-white m-b-sm">--}}
+{{--                            <i class="fa fa-facebook pull-left"></i>--}}
+{{--                            Sign in with Facebook</a>--}}
+{{--                        <a href="{{route('google-auth')}}" class="btn btn-block red text-white">--}}
+{{--                            <i--}}
+{{--                                class="fa fa-google-plus pull-left">--}}
 
-                            </i>
-                            Sign in with Facebook</a>
-                        <a href="{{route('google-auth')}}" class="btn btn-block red text-white">
-                            <i
-                                class="fa fa-google-plus pull-left">
-
-                            </i> Sign in with Google+
-                        </a>
+{{--                            </i> Sign in with Google+--}}
+{{--                        </a>--}}
                     </div>
-                    <div class="m-y text-sm">OR</div>
+{{--                    <div class="m-y text-sm">OR</div>--}}
 
                     <form method="POST" name="form" action="{{ route('login') }}">
 
@@ -91,7 +97,7 @@
                             <input id="email" name="email" type="email" class="form-control" placeholder="Email" required>
                         </div>
                         <div class="form-group">
-                            <input id="password" name="password" type="password" class="form-control" placeholder="password" required>
+                            <input id="password" name="password" type="password" class="form-control" placeholder="password">
                         </div>
                         <div class="m-b-md"><label class="md-check"><input type="checkbox"><i class="primary"></i> Keep me
                                 signed in</label></div>
@@ -106,4 +112,5 @@
                 </div>
             </div>
         </div>
+ </div>
     @endsection

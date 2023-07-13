@@ -8,6 +8,7 @@ use App\Models\Episode;
 use App\Models\Podcast;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Validation\Rule;
 
 class EpisodeController extends Controller
 {
@@ -42,33 +43,16 @@ class EpisodeController extends Controller
     public function store(Request $request)
     {
 //        request()->validate([
-//            'name' => 'required',
-//            'description' => 'required',
-//            'podcast_name' => 'required',
-//            'category_id'=> 'required',
-//            'cover_image' => 'required',
-//            'file_path' => 'required|' // Adjust the maximum file size as needed
+//            'name' => ['required', Rule::unique('episodes', 'name')],
+////            'description' => 'required',
+////            'podcast_name' => 'required',
+////            'category_id'=> 'required',
+////            'cover_image' => 'required',
+//            'file_path' => 'required|mimes:mp4,ogx,oga,ogv,ogg,webm|max:100000' // Adjust the maximum file size as needed
 //
 //        ]);
 
 
-//        dd('your are here');
-
-        // Store the podcast MP4 file
-//        $file = $request->file('file');
-//        $fileExtension = $file->getClientOriginalExtension();
-//        $fileName = time() . '.' . $fileExtension;
-//        $file->storeAs('public/episodes', $fileName);
-
-        // Create the podcast
-//        $pod = Podcast::class;
-//        $podcast = Podcast::class;;
-//        $podcast->name = auth()->user->name;
-//        $podcast->description = $request->description;
-//        $podcast->cover_image = $request->cover_image;
-//        $podcast->file_path = $fileName; // Store the file path in the database
-//
-//        $podcast->save();
 
 
         $cat = DB::table('categories')->where('id', $request->category_id)->first();
@@ -81,6 +65,7 @@ class EpisodeController extends Controller
         $episode->podcast_name = auth()->user()->name;
         $episode->category_id = $request->category_id;
         $episode->author = auth()->user()->name;
+        $episode->user_id = auth()->user()->id;
 //        $episode->podcast_id = $podcast->id; // auth()->user()->name
 //        $episode->file_path = $fileName; // Store the same file path for the episode
 

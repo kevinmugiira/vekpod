@@ -16,7 +16,7 @@ class BrowseController extends Controller
     public function index()
     {
         $category = Category::all();
-        $episodes = Episode::take(6)->get();
+        $episodes = Episode::latest()->take(8)->get();
 //        dd($episodes->cover_image);
         return view('vekpod.browse', compact('category', 'episodes'));
     }

@@ -41,6 +41,173 @@
 
                 <script src="{{asset('assets/scripts/app.min.js')}}"></script>
 
+
+                <div id="switcher">
+                    <div class="switcher white" id="sw-theme">
+                        <a href="#" data-ui-toggle-class="active" data-ui-target="#sw-theme" class="white sw-btn">
+                            <i class="fa fa-gear text-muted">
+
+                            </i>
+                        </a>
+                        <div class="box-header">
+                            <a href="" class="btn btn-xs rounded danger pull-right"></a>
+                            <strong>Theme Switcher</strong>
+                        </div>
+                        <div class="box-divider">
+
+                        </div>
+                        <div class="box-body">
+                            <p id="settingLayout" class="hidden-md-down">
+                                <label class="md-check m-y-xs" data-target="container">
+                                    <input type="checkbox">
+                                    <i class="green">
+
+                                    </i>
+                                    <span>Boxed Layout</span>
+                                </label>
+                                <label class="m-y-xs pointer" data-ui-fullscreen data-target="fullscreen">
+                                    <span class="fa fa-expand fa-fw m-r-xs"></span>
+                                    <span>Fullscreen Mode</span>
+                                </label>
+                            </p>
+                            <p>Colors:</p>
+                            <p data-target="color">
+                                <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+                                    <input type="radio" name="color" value="primary">
+                                    <i class="primary">
+
+                                    </i>
+                                </label>
+                                <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+                                    <input type="radio" name="color" value="accent">
+                                    <i class="accent">
+
+                                    </i>
+                                </label>
+                                <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+                                    <input type="radio" name="color" value="warn">
+                                    <i class="warn">
+
+                                    </i>
+                                </label>
+                                <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+                                    <input type="radio" name="color" value="success">
+                                    <i class="success">
+
+                                    </i>
+                                </label>
+                                <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+                                    <input type="radio" name="color" value="info">
+                                    <i class="info">
+
+                                    </i>
+                                </label>
+                                <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+                                    <input type="radio" name="color" value="blue">
+                                    <i class="blue">
+
+                                    </i>
+                                </label>
+                                <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+                                    <input type="radio" name="color" value="warning">
+                                    <i class="warning">
+
+                                    </i>
+                                </label>
+                                <label class="radio radio-inline m-a-0 ui-check ui-check-color ui-check-md">
+                                    <input type="radio" name="color" value="danger">
+                                    <i class="danger">
+
+                                    </i>
+                                </label>
+                            </p>
+                            <p>Themes:</p>
+                            <div data-target="bg" class="text-u-c text-center _600 clearfix">
+                                <label class="p-a col-xs-3 light pointer m-a-0">
+                                    <input type="radio" name="theme" value="" hidden>
+                                    <i class="active-checked fa fa-check">
+
+                                    </i>
+                                </label>
+                                <label class="p-a col-xs-3 grey pointer m-a-0">
+                                    <input type="radio" name="theme" value="grey" hidden>
+                                    <i class="active-checked fa fa-check">
+
+                                    </i>
+                                </label>
+                                <label class="p-a col-xs-3 dark pointer m-a-0">
+                                    <input type="radio" name="theme" value="dark" hidden>
+                                    <i class="active-checked fa fa-check">
+
+                                    </i>
+                                </label>
+                                <label class="p-a col-xs-3 black pointer m-a-0">
+                                    <input type="radio" name="theme" value="black" hidden>
+                                    <i class="active-checked fa fa-check">
+
+                                    </i>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="share-modal" class="modal fade animate">
+                    <div class="modal-dialog">
+                        <div class="modal-content fade-down">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Share</h5>
+                            </div>
+                            <div class="modal-body p-lg">
+                                <div id="share-list" class="m-b">
+                                    <a href="https://www.facebook.com/" class="btn btn-icon btn-social rounded btn-social-colored indigo" title="Facebook">
+                                        <i class="fa fa-facebook">
+
+                                        </i>
+                                        <i class="fa fa-facebook">
+
+                                        </i>
+                                    </a>
+                                    <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Flogin%3Flang%3Den" class="btn btn-icon btn-social rounded btn-social-colored light-blue" title="Twitter">
+                                        <i class="fa fa-twitter">
+
+                                        </i>
+                                        <i class="fa fa-twitter">
+
+                                        </i>
+                                    </a>
+                                    <a href="https://accounts.google.com/v3/signin/identifier?dsh=S1325770267%3A1688715339123031&ifkv=AeDOFXisqAdJQ5x3NrvI89gpbZEKiDFpSLIgL5dYbQ79O2KpU81pzAVfvfRioIkPQxu7WD_SzmrC&ltmpl=mobNH&flowName=GlifWebSignIn&flowEntry=ServiceLogin" class="btn btn-icon btn-social rounded btn-social-colored red-600" title="Google+">
+                                        <i class="fa fa-google-plus">
+
+                                        </i>
+                                        <i class="fa fa-google-plus">
+
+                                        </i>
+                                    </a>
+                                    <a href="https://www.tumblr.com/" class="btn btn-icon btn-social rounded btn-social-colored blue-grey-600" title="Trumblr">
+                                        <i class="fa fa-tumblr">
+
+                                        </i>
+                                        <i class="fa fa-tumblr">
+
+                                        </i>
+                                    </a>
+                                    <a href="https://www.pinterest.com/login/" class="btn btn-icon btn-social rounded btn-social-colored red-700" title="Pinterst">
+                                        <i class="fa fa-pinterest">
+
+                                        </i>
+                                        <i class="fa fa-pinterest">
+
+                                        </i>
+                                    </a>
+                                </div>
+                                <div>
+                                    <input class="form-control" value="http://plamusic.com/slug">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

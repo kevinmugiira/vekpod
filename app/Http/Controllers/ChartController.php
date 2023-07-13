@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Episode;
+use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class ChartController extends Controller
@@ -13,7 +17,24 @@ class ChartController extends Controller
      */
     public function index()
     {
-        return view('vekpod.chart');
+
+        $users = User::all()->count();
+        $episodes = Episode::all()->count();
+        $data = User::select('id', 'created_at')->get()->groupBy(function ($data){
+            Carbon::parse($data->create_at)->format('D');
+        });
+
+
+        $months = [];
+        $monthCount = [];
+        foreach ($data as $month => $values) {
+            $months[] = $month;
+            $monthCount[] = count($values);
+        }
+
+        $categories = Category::all()->count();
+
+        return view('vekpod.chart', compact('data','months','monthCount','users','episodes','categories'));
     }
 
     /**

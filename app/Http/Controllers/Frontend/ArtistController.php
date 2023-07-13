@@ -17,8 +17,12 @@ class ArtistController extends Controller
     public function index()
     {
         $user = User::all();
-//        $episodes = Episode::user()->episodes();
-        return view('vekpod.artist', compact('user'));
+        $episodes = Episode::all();
+
+//        $usersWithEpisodeCount = User::withCount('episodes')->get();
+
+//        dd($usersWithEpisodeCount);
+        return view('vekpod.artist', compact('user','episodes'));
     }
 
 

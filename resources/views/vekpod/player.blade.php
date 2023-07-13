@@ -6,7 +6,9 @@
         <div class="app-body" id="view">
             <div class="page-content">
                 <div class="padding p-b-0">
-                    <div class="page-title m-b"><h1 class="inline m-a-0">Discover</h1></div>
+                    <div class="page-title m-b">
+                        <h1 class="inline m-a-0">Discover</h1>
+                    </div>
                     <div class="row row-sm item-masonry item-info-overlay">
 
                         @foreach($episodes as $epi)
@@ -20,10 +22,10 @@
 		                    ,nav: true
 		                    ,animateOut:&#x27;fadeOut&#x27;
 		                  }">
-                                <div class="item r" data-id="item-115" data-src="{{$epi->file_path}}">
-{{--                                    <video src="{{ $epi->file_path }}" controls></video>--}}
+                                <div class="item r" data-id="item-115" data-src="{{asset('uploads/pods')}}/{{$epi->file_path}}">
+{{--                                    <video src="{{asset('uploads/pods')}}/{{$epi->file_path}}" controls></video>--}}
                                     <div class="item-media primary">
-                                        <a href="{{url('track-detail')}}" class="item-media-content" style="background-image: url('{{$epi->cover_image}}')"></a>
+                                        <a href="{{url('track/'.$epi->id)}}" class="item-media-content" style="background-image: url('{{asset('uploads/cover-images')}}/{{$epi->cover_image}}')"></a>
                                         <div class="item-overlay center">
                                             <button class="btn-playpause">Play</button>
                                         </div>
@@ -45,16 +47,16 @@
                                             </div>
                                         </div>
                                         <div class="item-title text-ellipsis">
-                                            <a href="{{url('track-detail')}}">New Episode from {{$epi->author}}</a>
+                                            <a href="{{url('track/'.$epi->id)}}">New Episode from {{$epi->author}}</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="{{url('artist-detail')}}" class="text-muted">{{$epi->author}}</a>
+                                            <a href="{{url('detail')}}" class="text-muted">{{$epi->author}}</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item r" data-id="item-116" data-src="{{$epi->file_path}}">
+                                <div class="item r" data-id="item-116" data-src="{{asset('uploads/pods')}}/{{$epi->file_path}}">
                                     <div class="item-media info">
-                                        <a href="{{url('track-detail')}}" class="item-media-content" style="background-image: url('{{$epi->cover_image}}')"></a>
+                                        <a href="{{url('track')}}" class="item-media-content" style="background-image: url('{{asset('uploads/cover-images')}}/{{$epi->cover_image}}')"></a>
                                         <div class="item-overlay center">
                                             <button class="btn-playpause">Play</button>
                                         </div>
@@ -72,137 +74,48 @@
                                             </div>
                                         </div>
                                         <div class="item-title text-ellipsis">
-                                            <a href="{{url('track-detail')}}">{{$epi->name}}</a>
+                                            <a href="{{url('track')}}">{{$epi->name}}</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="{{url('artist-detail')}}" class="text-muted">{{$epi->author}}</a>
+                                            <a href="{{url('detail')}}" class="text-muted">{{$epi->author}}</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="item r" data-id="item-117" data-src="{{$epi->file_path}}">
+                                <div class="item r" data-id="item-117" data-src="{{asset('uploads/pods')}}/{{$epi->file_path}}">
                                     <div class="item-media accent">
-                                        <a href="{{url('track-detail')}}" class="item-media-content" style="background-image: url('{{$epi->cover_image}}')"></a>
+                                        <a href="{{url('track-detail')}}" class="item-media-content" style="background-image: url('{{asset('uploads/cover-images')}}/{{$epi->cover_image}}')"></a>
                                         <div class="item-overlay center">
                                             <button class="btn-playpause">Play</button>
                                         </div>
                                     </div>
                                     <div class="item-info">
-                                        <div class="item-overlay bottom text-right"><a href="#" class="btn-favorite"><i
-                                                    class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"
-                                                                                      data-toggle="dropdown"><i
-                                                    class="fa fa-ellipsis-h"></i></a>
+                                        <div class="item-overlay bottom text-right">
+                                            <a href="#" class="btn-favorite">
+                                                <i class="fa fa-heart-o"></i>
+                                            </a>
+                                            <a href="#" class="btn-more" data-toggle="dropdown">
+                                                <i class="fa fa-ellipsis-h"></i>
+                                            </a>
                                             <div class="dropdown-menu pull-right black lt"></div>
                                         </div>
                                         <div class="item-title text-ellipsis">
-                                            <a href="{{url('track-detail')}}">New Track from {{$epi->author}}</a>
+                                            <a href="{{url('track')}}">New Track from {{$epi->author}}</a>
                                         </div>
                                         <div class="item-author text-sm text-ellipsis">
-                                            <a href="{{url('artist-detail')}}" class="text-muted">{{$epi->author}}</a>
+                                            <a href="{{url('detail')}}" class="text-muted">{{$epi->author}}</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         @endforeach
-{{--                        <div class="col-sm-3 col-xs-6">--}}
-{{--                            <div class="item r" data-id="item-1"--}}
-{{--                                 data-src="http://api.soundcloud.com/tracks/269944843/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">--}}
-{{--                                <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"--}}
-{{--                                                           style="background-image: url('{{asset('assets/images/b0.jpg')}}')"></a>--}}
-{{--                                    <div class="item-overlay center">--}}
-{{--                                        <button class="btn-playpause">Play</button>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="item-info">--}}
-{{--                                    <div class="item-overlay bottom text-right"><a href="#" class="btn-favorite"><i--}}
-{{--                                                class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"--}}
-{{--                                                                                  data-toggle="dropdown"><i--}}
-{{--                                                class="fa fa-ellipsis-h"></i></a>--}}
-{{--                                        <div class="dropdown-menu pull-right black lt"></div>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Pull Up</a></div>--}}
-{{--                                    <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"--}}
-{{--                                                                                      class="text-muted">Summerella</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="col-sm-3 col-xs-6">--}}
-{{--                            <div class="item r" data-id="item-2"--}}
-{{--                                 data-src="{{$epi->file_path}}">--}}
-{{--                                <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"--}}
-{{--                                                           style="background-image: url('{{asset('assets/images/b1.jpg')}}')"></a>--}}
-{{--                                    <div class="item-overlay center">--}}
-{{--                                        <button class="btn-playpause">Play</button>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="item-info">--}}
-{{--                                    <div class="item-overlay bottom text-right"><a href="#" class="btn-favorite"><i--}}
-{{--                                                class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"--}}
-{{--                                                                                  data-toggle="dropdown"><i--}}
-{{--                                                class="fa fa-ellipsis-h"></i></a>--}}
-{{--                                        <div class="dropdown-menu pull-right black lt"></div>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Fireworks</a>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"--}}
-{{--                                                                                      class="text-muted">Kygo</a></div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="col-sm-3 col-xs-6">--}}
-{{--                            <div class="item r" data-id="item-3"--}}
-{{--                                 data-src="http://api.soundcloud.com/tracks/79031167/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">--}}
-{{--                                <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"--}}
-{{--                                                           style="background-image: url('{{asset('assets/images/b2.jpg')}}')"></a>--}}
-{{--                                    <div class="item-overlay center">--}}
-{{--                                        <button class="btn-playpause">Play</button>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="item-info">--}}
-{{--                                    <div class="item-overlay bottom text-right"><a href="#" class="btn-favorite"><i--}}
-{{--                                                class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"--}}
-{{--                                                                                  data-toggle="dropdown"><i--}}
-{{--                                                class="fa fa-ellipsis-h"></i></a>--}}
-{{--                                        <div class="dropdown-menu pull-right black lt"></div>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">I Wanna Be In the--}}
-{{--                                            Cavalry</a></div>--}}
-{{--                                    <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"--}}
-{{--                                                                                      class="text-muted">Jeremy--}}
-{{--                                            Scott</a></div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                        <div class="col-sm-3 col-xs-6">--}}
-{{--                            <div class="item r" data-id="item-4"--}}
-{{--                                 data-src="http://api.soundcloud.com/tracks/230791292/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">--}}
-{{--                                <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"--}}
-{{--                                                           style="background-image: url('{{asset('assets/images/b3.jpg')}}')"></a>--}}
-{{--                                    <div class="item-overlay center">--}}
-{{--                                        <button class="btn-playpause">Play</button>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="item-info">--}}
-{{--                                    <div class="item-overlay bottom text-right"><a href="#" class="btn-favorite"><i--}}
-{{--                                                class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"--}}
-{{--                                                                                  data-toggle="dropdown"><i--}}
-{{--                                                class="fa fa-ellipsis-h"></i></a>--}}
-{{--                                        <div class="dropdown-menu pull-right black lt"></div>--}}
-{{--                                    </div>--}}
-{{--                                    <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">What A Time To Be--}}
-{{--                                            Alive</a></div>--}}
-{{--                                    <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"--}}
-{{--                                                                                      class="text-muted">Judith--}}
-{{--                                            Garcia</a></div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
+
                     </div>
                 </div>
                 <div class="row-col">
                     <div class="col-lg-9 b-r no-border-md">
-                        <div class="padding"><h2 class="widget-title h4 m-b">Treading</h2>
+                        <div class="padding">
+                            <h2 class="widget-title h4 m-b">Trending</h2>
                             <div class="owl-carousel owl-theme owl-dots-center" data-ui-jp="owlCarousel"
                                  data-ui-options="{
 					margin: 20,
@@ -216,770 +129,66 @@
 				        }
 				    }
 				}">
+                                @foreach($episodes as $episode)
                                 <div class="">
-                                    <div class="item r" data-id="item-2"
-                                         data-src="http://api.soundcloud.com/tracks/259445397/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                        <div class="item-media item-media-4by3"><a href="{{url('track-detail')}}"
-                                                                                   class="item-media-content"
-                                                                                   style="background-image: url('{{asset('assets/images/b1.jpg')}}')"></a>
+                                    <div class="item r" data-id="item-2" data-src="{{asset('uploads/pods')}}/{{$episode->file_path}}">
+                                        <div class="item-media item-media-4by3">
+                                            <a href="{{url('track/'.$episode->id)}}" class="item-media-content" style="background-image: url('{{asset('uploads/cover-images')}}/{{$episode->cover_image}}')"></a>
                                             <div class="item-overlay center">
                                                 <button class="btn-playpause">Play</button>
                                             </div>
                                         </div>
                                         <div class="item-info">
-                                            <div class="item-overlay bottom text-right"><a href="#"
-                                                                                           class="btn-favorite"><i
-                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"
-                                                                                          data-toggle="dropdown"><i
-                                                        class="fa fa-ellipsis-h"></i></a>
+                                            <div class="item-overlay bottom text-right">
+                                                <a href="#" class="btn-favorite">
+                                                    <i class="fa fa-heart-o"></i>
+                                                </a>
+                                                <a href="#" class="btn-more" data-toggle="dropdown">
+                                                    <i class="fa fa-ellipsis-h"></i>
+                                                </a>
                                                 <div class="dropdown-menu pull-right black lt"></div>
                                             </div>
-                                            <div class="item-title text-ellipsis"><a
-                                                    href="{{url('track-detail')}}">Fireworks</a></div>
-                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"
-                                                                                              class="text-muted">Kygo</a>
+                                            <div class="item-title text-ellipsis">
+                                                <a href="{{url('track/'.$episode->id)}}">{{$episode->name}}</a>
+                                            </div>
+                                            <div class="item-author text-sm text-ellipsis">
+                                                <a href="{{url('detail')}}" class="text-muted">{{$episode->author}}</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="">
-                                    <div class="item r" data-id="item-6"
-                                         data-src="http://api.soundcloud.com/tracks/236107824/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                        <div class="item-media item-media-4by3"><a href="{{url('track-detail')}}"
-                                                                                   class="item-media-content"
-                                                                                   style="background-image: url('{{asset('assets/images/b5.jpg')}}')"></a>
-                                            <div class="item-overlay center">
-                                                <button class="btn-playpause">Play</button>
-                                            </div>
-                                        </div>
-                                        <div class="item-info">
-                                            <div class="item-overlay bottom text-right"><a href="#"
-                                                                                           class="btn-favorite"><i
-                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"
-                                                                                          data-toggle="dropdown"><i
-                                                        class="fa fa-ellipsis-h"></i></a>
-                                                <div class="dropdown-menu pull-right black lt"></div>
-                                            </div>
-                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Body on
-                                                    me</a></div>
-                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"
-                                                                                              class="text-muted">Rita
-                                                    Ora</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <div class="item r" data-id="item-3"
-                                         data-src="http://api.soundcloud.com/tracks/79031167/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                        <div class="item-media item-media-4by3"><a href="{{url('track-detail')}}"
-                                                                                   class="item-media-content"
-                                                                                   style="background-image: url('{{asset('assets/images/b2.jpg')}}')"></a>
-                                            <div class="item-overlay center">
-                                                <button class="btn-playpause">Play</button>
-                                            </div>
-                                        </div>
-                                        <div class="item-info">
-                                            <div class="item-overlay bottom text-right"><a href="#"
-                                                                                           class="btn-favorite"><i
-                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"
-                                                                                          data-toggle="dropdown"><i
-                                                        class="fa fa-ellipsis-h"></i></a>
-                                                <div class="dropdown-menu pull-right black lt"></div>
-                                            </div>
-                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">I Wanna Be
-                                                    In the Cavalry</a></div>
-                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"
-                                                                                              class="text-muted">Jeremy
-                                                    Scott</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <div class="item r" data-id="item-8"
-                                         data-src="http://api.soundcloud.com/tracks/236288744/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                        <div class="item-media item-media-4by3"><a href="{{url('track-detail')}}"
-                                                                                   class="item-media-content"
-                                                                                   style="background-image: url('{{asset('assets/images/b7.jpg')}}')"></a>
-                                            <div class="item-overlay center">
-                                                <button class="btn-playpause">Play</button>
-                                            </div>
-                                        </div>
-                                        <div class="item-info">
-                                            <div class="item-overlay bottom text-right"><a href="#"
-                                                                                           class="btn-favorite"><i
-                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"
-                                                                                          data-toggle="dropdown"><i
-                                                        class="fa fa-ellipsis-h"></i></a>
-                                                <div class="dropdown-menu pull-right black lt"></div>
-                                            </div>
-                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Simple
-                                                    Place To Be</a></div>
-                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"
-                                                                                              class="text-muted">RYD</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <div class="item r" data-id="item-9"
-                                         data-src="http://api.soundcloud.com/tracks/264094434/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                        <div class="item-media item-media-4by3"><a href="{{url('track-detail')}}"
-                                                                                   class="item-media-content"
-                                                                                   style="background-image: url('{{asset('assets/images/b8.jpg')}}')"></a>
-                                            <div class="item-overlay center">
-                                                <button class="btn-playpause">Play</button>
-                                            </div>
-                                        </div>
-                                        <div class="item-info">
-                                            <div class="item-overlay bottom text-right"><a href="#"
-                                                                                           class="btn-favorite"><i
-                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"
-                                                                                          data-toggle="dropdown"><i
-                                                        class="fa fa-ellipsis-h"></i></a>
-                                                <div class="dropdown-menu pull-right black lt"></div>
-                                            </div>
-                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">All I
-                                                    Need</a></div>
-                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"
-                                                                                              class="text-muted">Pablo
-                                                    Nouvelle</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <div class="item r" data-id="item-10"
-                                         data-src="http://api.soundcloud.com/tracks/237514750/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                        <div class="item-media item-media-4by3"><a href="{{url('track-detail')}}"
-                                                                                   class="item-media-content"
-                                                                                   style="background-image: url('{{asset('assets/images/b9.jpg')}}')"></a>
-                                            <div class="item-overlay center">
-                                                <button class="btn-playpause">Play</button>
-                                            </div>
-                                        </div>
-                                        <div class="item-info">
-                                            <div class="item-overlay bottom text-right"><a href="#"
-                                                                                           class="btn-favorite"><i
-                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"
-                                                                                          data-toggle="dropdown"><i
-                                                        class="fa fa-ellipsis-h"></i></a>
-                                                <div class="dropdown-menu pull-right black lt"></div>
-                                            </div>
-                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">The Open
-                                                    Road</a></div>
-                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"
-                                                                                              class="text-muted">Postiljonen</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <div class="item r" data-id="item-11"
-                                         data-src="http://api.soundcloud.com/tracks/218060449/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                        <div class="item-media item-media-4by3"><a href="{{url('track-detail')}}"
-                                                                                   class="item-media-content"
-                                                                                   style="background-image: url('{{asset('assets/images/b10.jpg')}}')"></a>
-                                            <div class="item-overlay center">
-                                                <button class="btn-playpause">Play</button>
-                                            </div>
-                                        </div>
-                                        <div class="item-info">
-                                            <div class="item-overlay bottom text-right"><a href="#"
-                                                                                           class="btn-favorite"><i
-                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"
-                                                                                          data-toggle="dropdown"><i
-                                                        class="fa fa-ellipsis-h"></i></a>
-                                                <div class="dropdown-menu pull-right black lt"></div>
-                                            </div>
-                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Spring</a>
-                                            </div>
-                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"
-                                                                                              class="text-muted">Pablo
-                                                    Nouvelle</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <div class="item r" data-id="item-7"
-                                         data-src="http://api.soundcloud.com/tracks/245566366/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                        <div class="item-media item-media-4by3"><a href="{{url('track-detail')}}"
-                                                                                   class="item-media-content"
-                                                                                   style="background-image: url('{{asset('assets/images/b6.jpg')}}')"></a>
-                                            <div class="item-overlay center">
-                                                <button class="btn-playpause">Play</button>
-                                            </div>
-                                        </div>
-                                        <div class="item-info">
-                                            <div class="item-overlay bottom text-right"><a href="#"
-                                                                                           class="btn-favorite"><i
-                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"
-                                                                                          data-toggle="dropdown"><i
-                                                        class="fa fa-ellipsis-h"></i></a>
-                                                <div class="dropdown-menu pull-right black lt"></div>
-                                            </div>
-                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Reflection
-                                                    (Deluxe)</a></div>
-                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"
-                                                                                              class="text-muted">Fifth
-                                                    Harmony</a></div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                             <h2 class="widget-title h4 m-b">New</h2>
                             <div class="row">
+                                @foreach($byCategoryNew as $epis)
                                 <div class="col-xs-4 col-sm-4 col-md-3">
-                                    <div class="item r" data-id="item-3"
-                                         data-src="http://api.soundcloud.com/tracks/79031167/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                        <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
-                                                                   style="background-image: url('{{asset('assets/images/b2.jpg')}}')"></a>
+                                    <div class="item r" data-id="item-3" data-src="('{{asset('uploads/pods')}}/{{$epis->file_path}}')">
+                                        <div class="item-media">
+                                            <a href="{{url('track/'.$epis->id)}}" class="item-media-content" style="background-image: url('{{asset('uploads/cover-images')}}/{{$epis->cover_image}}')"></a>
                                             <div class="item-overlay center">
                                                 <button class="btn-playpause">Play</button>
                                             </div>
                                         </div>
                                         <div class="item-info">
-                                            <div class="item-overlay bottom text-right"><a href="#"
-                                                                                           class="btn-favorite"><i
-                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"
-                                                                                          data-toggle="dropdown"><i
-                                                        class="fa fa-ellipsis-h"></i></a>
+                                            <div class="item-overlay bottom text-right">
+                                                <a href="#" class="btn-favorite">
+                                                    <i class="fa fa-heart-o"></i>
+                                                </a>
+                                                <a href="#" class="btn-more" data-toggle="dropdown">
+                                                    <i class="fa fa-ellipsis-h"></i>
+                                                </a>
                                                 <div class="dropdown-menu pull-right black lt"></div>
                                             </div>
-                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">I Wanna Be
-                                                    In the Cavalry</a></div>
-                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"
-                                                                                              class="text-muted">Jeremy
-                                                    Scott</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-4 col-sm-4 col-md-3">
-                                    <div class="item r" data-id="item-10"
-                                         data-src="http://api.soundcloud.com/tracks/237514750/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                        <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
-                                                                   style="background-image: url('{{asset('assets/images/b9.jpg')}}')"></a>
-                                            <div class="item-overlay center">
-                                                <button class="btn-playpause">Play</button>
-                                            </div>
-                                        </div>
-                                        <div class="item-info">
-                                            <div class="item-overlay bottom text-right"><a href="#"
-                                                                                           class="btn-favorite"><i
-                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"
-                                                                                          data-toggle="dropdown"><i
-                                                        class="fa fa-ellipsis-h"></i></a>
-                                                <div class="dropdown-menu pull-right black lt"></div>
-                                            </div>
-                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">The Open
-                                                    Road</a></div>
-                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"
-                                                                                              class="text-muted">Postiljonen</a>
+                                            <div class="item-title text-ellipsis">
+                                                <a href="{{url('track/'.$epis->id)}}">{{$epis->name}}</a></div>
+                                            <div class="item-author text-sm text-ellipsis">
+                                                <a href="{{url('detail')}}" class="text-muted">{{$epis->author}}</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-xs-4 col-sm-4 col-md-3">
-                                    <div class="item r" data-id="item-6"
-                                         data-src="http://api.soundcloud.com/tracks/236107824/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                        <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
-                                                                   style="background-image: url('{{asset('assets/images/b5.jpg')}}')"></a>
-                                            <div class="item-overlay center">
-                                                <button class="btn-playpause">Play</button>
-                                            </div>
-                                        </div>
-                                        <div class="item-info">
-                                            <div class="item-overlay bottom text-right"><a href="#"
-                                                                                           class="btn-favorite"><i
-                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"
-                                                                                          data-toggle="dropdown"><i
-                                                        class="fa fa-ellipsis-h"></i></a>
-                                                <div class="dropdown-menu pull-right black lt"></div>
-                                            </div>
-                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Body on
-                                                    me</a></div>
-                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"
-                                                                                              class="text-muted">Rita
-                                                    Ora</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-4 col-sm-4 col-md-3">
-                                    <div class="item r" data-id="item-12"
-                                         data-src="http://api.soundcloud.com/tracks/174495152/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                        <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
-                                                                   style="background-image: url('{{asset('assets/images/b11.jpg')}}')"></a>
-                                            <div class="item-overlay center">
-                                                <button class="btn-playpause">Play</button>
-                                            </div>
-                                        </div>
-                                        <div class="item-info">
-                                            <div class="item-overlay bottom text-right"><a href="#"
-                                                                                           class="btn-favorite"><i
-                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"
-                                                                                          data-toggle="dropdown"><i
-                                                        class="fa fa-ellipsis-h"></i></a>
-                                                <div class="dropdown-menu pull-right black lt"></div>
-                                            </div>
-                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Happy
-                                                    ending</a></div>
-                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"
-                                                                                              class="text-muted">Postiljonen</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-4 col-sm-4 col-md-3">
-                                    <div class="item r" data-id="item-1"
-                                         data-src="http://api.soundcloud.com/tracks/269944843/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                        <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
-                                                                   style="background-image: url('{{asset('assets/images/b0.jpg')}}')"></a>
-                                            <div class="item-overlay center">
-                                                <button class="btn-playpause">Play</button>
-                                            </div>
-                                        </div>
-                                        <div class="item-info">
-                                            <div class="item-overlay bottom text-right"><a href="#"
-                                                                                           class="btn-favorite"><i
-                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"
-                                                                                          data-toggle="dropdown"><i
-                                                        class="fa fa-ellipsis-h"></i></a>
-                                                <div class="dropdown-menu pull-right black lt"></div>
-                                            </div>
-                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Pull
-                                                    Up</a></div>
-                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"
-                                                                                              class="text-muted">Summerella</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-4 col-sm-4 col-md-3">
-                                    <div class="item r" data-id="item-2"
-                                         data-src="http://api.soundcloud.com/tracks/259445397/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                        <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
-                                                                   style="background-image: url('{{asset('assets/images/b1.jpg')}}')"></a>
-                                            <div class="item-overlay center">
-                                                <button class="btn-playpause">Play</button>
-                                            </div>
-                                        </div>
-                                        <div class="item-info">
-                                            <div class="item-overlay bottom text-right"><a href="#"
-                                                                                           class="btn-favorite"><i
-                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"
-                                                                                          data-toggle="dropdown"><i
-                                                        class="fa fa-ellipsis-h"></i></a>
-                                                <div class="dropdown-menu pull-right black lt"></div>
-                                            </div>
-                                            <div class="item-title text-ellipsis"><a
-                                                    href="{{url('track-detail')}}">Fireworks</a></div>
-                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"
-                                                                                              class="text-muted">Kygo</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-4 col-sm-4 col-md-3">
-                                    <div class="item r" data-id="item-11"
-                                         data-src="http://api.soundcloud.com/tracks/218060449/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">
-                                        <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
-                                                                   style="background-image: url('{{asset('assets/images/b10.jpg')}}')"></a>
-                                            <div class="item-overlay center">
-                                                <button class="btn-playpause">Play</button>
-                                            </div>
-                                        </div>
-                                        <div class="item-info">
-                                            <div class="item-overlay bottom text-right"><a href="#"
-                                                                                           class="btn-favorite"><i
-                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"
-                                                                                          data-toggle="dropdown"><i
-                                                        class="fa fa-ellipsis-h"></i></a>
-                                                <div class="dropdown-menu pull-right black lt"></div>
-                                            </div>
-                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Spring</a>
-                                            </div>
-                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"
-                                                                                              class="text-muted">Pablo
-                                                    Nouvelle</a></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xs-4 col-sm-4 col-md-3">
-                                    <div class="item r" data-id="item-5"
-                                         data-src="http://streaming.radionomy.com/JamendoLounge">
-                                        <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"
-                                                                   style="background-image: url('{{asset('assets/images/b4.jpg')}}')"></a>
-                                            <div class="item-overlay center">
-                                                <button class="btn-playpause">Play</button>
-                                            </div>
-                                        </div>
-                                        <div class="item-info">
-                                            <div class="item-overlay bottom text-right"><a href="#"
-                                                                                           class="btn-favorite"><i
-                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"
-                                                                                          data-toggle="dropdown"><i
-                                                        class="fa fa-ellipsis-h"></i></a>
-                                                <div class="dropdown-menu pull-right black lt"></div>
-                                            </div>
-                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Live
-                                                    Radio</a></div>
-                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"
-                                                                                              class="text-muted">Radionomy</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-{{--                            <h2 class="widget-title h4 m-b">Recommand for you</h2>--}}
-{{--                            <div class="row item-list item-list-md m-b">--}}
-{{--                                <div class="col-sm-6">--}}
-{{--                                    <div class="item r" data-id="item-3"--}}
-{{--                                         data-src="http://api.soundcloud.com/tracks/79031167/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">--}}
-{{--                                        <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"--}}
-{{--                                                                   style="background-image: url('{{asset('assets/images/b2.jpg')}}')"></a>--}}
-{{--                                            <div class="item-overlay center">--}}
-{{--                                                <button class="btn-playpause">Play</button>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="item-info">--}}
-{{--                                            <div class="item-overlay bottom text-right"><a href="#"--}}
-{{--                                                                                           class="btn-favorite"><i--}}
-{{--                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"--}}
-{{--                                                                                          data-toggle="dropdown"><i--}}
-{{--                                                        class="fa fa-ellipsis-h"></i></a>--}}
-{{--                                                <div class="dropdown-menu pull-right black lt"></div>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">I Wanna Be--}}
-{{--                                                    In the Cavalry</a></div>--}}
-{{--                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"--}}
-{{--                                                                                              class="text-muted">Jeremy--}}
-{{--                                                    Scott</a></div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-sm-6">--}}
-{{--                                    <div class="item r" data-id="item-11"--}}
-{{--                                         data-src="http://api.soundcloud.com/tracks/218060449/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">--}}
-{{--                                        <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"--}}
-{{--                                                                   style="background-image: url('{{asset('assets/images/b10.jpg')}}')"></a>--}}
-{{--                                            <div class="item-overlay center">--}}
-{{--                                                <button class="btn-playpause">Play</button>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="item-info">--}}
-{{--                                            <div class="item-overlay bottom text-right"><a href="#"--}}
-{{--                                                                                           class="btn-favorite"><i--}}
-{{--                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"--}}
-{{--                                                                                          data-toggle="dropdown"><i--}}
-{{--                                                        class="fa fa-ellipsis-h"></i></a>--}}
-{{--                                                <div class="dropdown-menu pull-right black lt"></div>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Spring</a>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"--}}
-{{--                                                                                              class="text-muted">Pablo--}}
-{{--                                                    Nouvelle</a></div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-sm-6">--}}
-{{--                                    <div class="item r" data-id="item-1"--}}
-{{--                                         data-src="http://api.soundcloud.com/tracks/269944843/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">--}}
-{{--                                        <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"--}}
-{{--                                                                   style="background-image: url('{{asset('assets/images/b0.jpg')}}')"></a>--}}
-{{--                                            <div class="item-overlay center">--}}
-{{--                                                <button class="btn-playpause">Play</button>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="item-info">--}}
-{{--                                            <div class="item-overlay bottom text-right"><a href="#"--}}
-{{--                                                                                           class="btn-favorite"><i--}}
-{{--                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"--}}
-{{--                                                                                          data-toggle="dropdown"><i--}}
-{{--                                                        class="fa fa-ellipsis-h"></i></a>--}}
-{{--                                                <div class="dropdown-menu pull-right black lt"></div>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Pull--}}
-{{--                                                    Up</a></div>--}}
-{{--                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"--}}
-{{--                                                                                              class="text-muted">Summerella</a>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-sm-6">--}}
-{{--                                    <div class="item r" data-id="item-4"--}}
-{{--                                         data-src="http://api.soundcloud.com/tracks/230791292/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">--}}
-{{--                                        <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"--}}
-{{--                                                                   style="background-image: url('{{asset('assets/images/b3.jpg')}}')"></a>--}}
-{{--                                            <div class="item-overlay center">--}}
-{{--                                                <button class="btn-playpause">Play</button>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="item-info">--}}
-{{--                                            <div class="item-overlay bottom text-right"><a href="#"--}}
-{{--                                                                                           class="btn-favorite"><i--}}
-{{--                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"--}}
-{{--                                                                                          data-toggle="dropdown"><i--}}
-{{--                                                        class="fa fa-ellipsis-h"></i></a>--}}
-{{--                                                <div class="dropdown-menu pull-right black lt"></div>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">What A--}}
-{{--                                                    Time To Be Alive</a></div>--}}
-{{--                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"--}}
-{{--                                                                                              class="text-muted">Judith--}}
-{{--                                                    Garcia</a></div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-sm-6">--}}
-{{--                                    <div class="item r" data-id="item-10"--}}
-{{--                                         data-src="http://api.soundcloud.com/tracks/237514750/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">--}}
-{{--                                        <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"--}}
-{{--                                                                   style="background-image: url('{{asset('assets/images/b9.jpg')}}')"></a>--}}
-{{--                                            <div class="item-overlay center">--}}
-{{--                                                <button class="btn-playpause">Play</button>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="item-info">--}}
-{{--                                            <div class="item-overlay bottom text-right"><a href="#"--}}
-{{--                                                                                           class="btn-favorite"><i--}}
-{{--                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"--}}
-{{--                                                                                          data-toggle="dropdown"><i--}}
-{{--                                                        class="fa fa-ellipsis-h"></i></a>--}}
-{{--                                                <div class="dropdown-menu pull-right black lt"></div>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">The Open--}}
-{{--                                                    Road</a></div>--}}
-{{--                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"--}}
-{{--                                                                                              class="text-muted">Postiljonen</a>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-sm-6">--}}
-{{--                                    <div class="item r" data-id="item-12"--}}
-{{--                                         data-src="http://api.soundcloud.com/tracks/174495152/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">--}}
-{{--                                        <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"--}}
-{{--                                                                   style="background-image: url('{{asset('assets/images/b11.jpg')}}')"></a>--}}
-{{--                                            <div class="item-overlay center">--}}
-{{--                                                <button class="btn-playpause">Play</button>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="item-info">--}}
-{{--                                            <div class="item-overlay bottom text-right"><a href="#"--}}
-{{--                                                                                           class="btn-favorite"><i--}}
-{{--                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"--}}
-{{--                                                                                          data-toggle="dropdown"><i--}}
-{{--                                                        class="fa fa-ellipsis-h"></i></a>--}}
-{{--                                                <div class="dropdown-menu pull-right black lt"></div>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Happy--}}
-{{--                                                    ending</a></div>--}}
-{{--                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"--}}
-{{--                                                                                              class="text-muted">Postiljonen</a>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-sm-6">--}}
-{{--                                    <div class="item r" data-id="item-9"--}}
-{{--                                         data-src="http://api.soundcloud.com/tracks/264094434/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">--}}
-{{--                                        <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"--}}
-{{--                                                                   style="background-image: url('{{asset('assets/images/b8.jpg')}}')"></a>--}}
-{{--                                            <div class="item-overlay center">--}}
-{{--                                                <button class="btn-playpause">Play</button>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="item-info">--}}
-{{--                                            <div class="item-overlay bottom text-right"><a href="#"--}}
-{{--                                                                                           class="btn-favorite"><i--}}
-{{--                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"--}}
-{{--                                                                                          data-toggle="dropdown"><i--}}
-{{--                                                        class="fa fa-ellipsis-h"></i></a>--}}
-{{--                                                <div class="dropdown-menu pull-right black lt"></div>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">All I--}}
-{{--                                                    Need</a></div>--}}
-{{--                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"--}}
-{{--                                                                                              class="text-muted">Pablo--}}
-{{--                                                    Nouvelle</a></div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-sm-6">--}}
-{{--                                    <div class="item r" data-id="item-6"--}}
-{{--                                         data-src="http://api.soundcloud.com/tracks/236107824/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">--}}
-{{--                                        <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"--}}
-{{--                                                                   style="background-image: url('{{asset('assets/images/b5.jpg')}}')"></a>--}}
-{{--                                            <div class="item-overlay center">--}}
-{{--                                                <button class="btn-playpause">Play</button>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="item-info">--}}
-{{--                                            <div class="item-overlay bottom text-right"><a href="#"--}}
-{{--                                                                                           class="btn-favorite"><i--}}
-{{--                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"--}}
-{{--                                                                                          data-toggle="dropdown"><i--}}
-{{--                                                        class="fa fa-ellipsis-h"></i></a>--}}
-{{--                                                <div class="dropdown-menu pull-right black lt"></div>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Body on--}}
-{{--                                                    me</a></div>--}}
-{{--                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"--}}
-{{--                                                                                              class="text-muted">Rita--}}
-{{--                                                    Ora</a></div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-sm-6">--}}
-{{--                                    <div class="item r" data-id="item-5"--}}
-{{--                                         data-src="http://streaming.radionomy.com/JamendoLounge">--}}
-{{--                                        <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"--}}
-{{--                                                                   style="background-image: url('{{asset('assets/images/b4.jpg')}}')"></a>--}}
-{{--                                            <div class="item-overlay center">--}}
-{{--                                                <button class="btn-playpause">Play</button>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="item-info">--}}
-{{--                                            <div class="item-overlay bottom text-right"><a href="#"--}}
-{{--                                                                                           class="btn-favorite"><i--}}
-{{--                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"--}}
-{{--                                                                                          data-toggle="dropdown"><i--}}
-{{--                                                        class="fa fa-ellipsis-h"></i></a>--}}
-{{--                                                <div class="dropdown-menu pull-right black lt"></div>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Live--}}
-{{--                                                    Radio</a></div>--}}
-{{--                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"--}}
-{{--                                                                                              class="text-muted">Radionomy</a>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-sm-6">--}}
-{{--                                    <div class="item r" data-id="item-2"--}}
-{{--                                         data-src="http://api.soundcloud.com/tracks/259445397/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">--}}
-{{--                                        <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"--}}
-{{--                                                                   style="background-image: url('{{asset('assets/images/b1.jpg')}}')"></a>--}}
-{{--                                            <div class="item-overlay center">--}}
-{{--                                                <button class="btn-playpause">Play</button>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="item-info">--}}
-{{--                                            <div class="item-overlay bottom text-right"><a href="#"--}}
-{{--                                                                                           class="btn-favorite"><i--}}
-{{--                                                        class="fa fa-heart-o"></i></a> <a href="#" class="btn-more"--}}
-{{--                                                                                          data-toggle="dropdown"><i--}}
-{{--                                                        class="fa fa-ellipsis-h"></i></a>--}}
-{{--                                                <div class="dropdown-menu pull-right black lt"></div>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="item-title text-ellipsis"><a--}}
-{{--                                                    href="{{url('track-detail')}}">Fireworks</a></div>--}}
-{{--                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"--}}
-{{--                                                                                              class="text-muted">Kygo</a>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-                        </div>
-                    </div>
-{{--                    <div class="col-lg-3 w-xxl w-auto-md">--}}
-{{--                        <div class="padding" style="bottom: 60px" data-ui-jp="stick_in_parent">--}}
-{{--                            <h6 class="text text-muted">5 Likes</h6>--}}
-{{--                            <div class="row item-list item-list-sm m-b">--}}
-{{--                                <div class="col-xs-12">--}}
-{{--                                    <div class="item r" data-id="item-3"--}}
-{{--                                         data-src="http://api.soundcloud.com/tracks/79031167/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">--}}
-{{--                                        <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"--}}
-{{--                                                                   style="background-image: url('{{asset('assets/images/b2.jpg')}}')"></a>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="item-info">--}}
-{{--                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">I Wanna Be--}}
-{{--                                                    In the Cavalry</a></div>--}}
-{{--                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"--}}
-{{--                                                                                              class="text-muted">Jeremy--}}
-{{--                                                    Scott</a></div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-xs-12">--}}
-{{--                                    <div class="item r" data-id="item-2"--}}
-{{--                                         data-src="http://api.soundcloud.com/tracks/259445397/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">--}}
-{{--                                        <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"--}}
-{{--                                                                   style="background-image: url('{{asset('assets/images/b1.jpg')}}')"></a>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="item-info">--}}
-{{--                                            <div class="item-title text-ellipsis"><a--}}
-{{--                                                    href="{{url('track-detail')}}">Fireworks</a></div>--}}
-{{--                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"--}}
-{{--                                                                                              class="text-muted">Kygo</a>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-xs-12">--}}
-{{--                                    <div class="item r" data-id="item-1"--}}
-{{--                                         data-src="http://api.soundcloud.com/tracks/269944843/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">--}}
-{{--                                        <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"--}}
-{{--                                                                   style="background-image: url('{{asset('assets/images/b0.jpg')}}')"></a>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="item-info">--}}
-{{--                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Pull--}}
-{{--                                                    Up</a></div>--}}
-{{--                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"--}}
-{{--                                                                                              class="text-muted">Summerella</a>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-xs-12">--}}
-{{--                                    <div class="item r" data-id="item-7"--}}
-{{--                                         data-src="http://api.soundcloud.com/tracks/245566366/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">--}}
-{{--                                        <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"--}}
-{{--                                                                   style="background-image: url('{{asset('assets/images/b6.jpg')}}')"></a>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="item-info">--}}
-{{--                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Reflection--}}
-{{--                                                    (Deluxe)</a></div>--}}
-{{--                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"--}}
-{{--                                                                                              class="text-muted">Fifth--}}
-{{--                                                    Harmony</a></div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                                <div class="col-xs-12">--}}
-{{--                                    <div class="item r" data-id="item-6"--}}
-{{--                                         data-src="http://api.soundcloud.com/tracks/236107824/stream?client_id=a10d44d431ad52868f1bce6d36f5234c">--}}
-{{--                                        <div class="item-media"><a href="{{url('track-detail')}}" class="item-media-content"--}}
-{{--                                                                   style="background-image: url('{{asset('assets/images/b5.jpg')}}')"></a>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="item-info">--}}
-{{--                                            <div class="item-title text-ellipsis"><a href="{{url('track-detail')}}">Body on--}}
-{{--                                                    me</a></div>--}}
-{{--                                            <div class="item-author text-sm text-ellipsis"><a href="{{url('artist-detail')}}"--}}
-{{--                                                                                              class="text-muted">Rita--}}
-{{--                                                    Ora</a></div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <h6 class="text text-muted">Go mobile</h6>--}}
-{{--                            <div class="btn-groups"><a href="" class="btn btn-sm dark lt m-r-xs"--}}
-{{--                                                       style="width: 135px"><span class="pull-left m-r-sm"><i--}}
-{{--                                            class="fa fa-apple fa-2x"></i></span> <span class="clear text-left l-h-1x"><span--}}
-{{--                                            class="text-muted text-xxs">Download on the</span> <b--}}
-{{--                                            class="block m-b-xs">App Store</b></span></a> <a href="" class="btn btn-sm dark lt"--}}
-{{--                                                                                             style="width: 133px"><span--}}
-{{--                                        class="pull-left m-r-sm"><i class="fa fa-play fa-2x"></i></span> <span--}}
-{{--                                        class="clear text-left l-h-1x"><span class="text-muted text-xxs">Get it on</span> <b--}}
-{{--                                            class="block m-b-xs m-r-xs">Google Play</b></span></a></div>--}}
-{{--                            <div class="b-b m-y"></div>--}}
-{{--                            <div class="nav text-sm _600"><a href="#" class="nav-link text-muted m-r-xs">About</a> <a--}}
-{{--                                    href="#" class="nav-link text-muted m-r-xs">Contact</a> <a href="#"--}}
-{{--                                                                                               class="nav-link text-muted m-r-xs">Legal</a>--}}
-{{--                                <a href="#" class="nav-link text-muted m-r-xs">Policy</a></div>--}}
-{{--                            <p class="text-muted text-xs p-b-lg">&copy; Copyright 2016</p></div>--}}
-{{--                    </div>--}}
+                                @endforeach
                 </div>
             </div>
         </div>
@@ -988,8 +197,8 @@
         <div class="switcher white" id="sw-theme"><a href="#" data-ui-toggle-class="active" data-ui-target="#sw-theme"
                                                      class="white sw-btn"><i class="fa fa-gear text-muted"></i></a>
             <div class="box-header"><a
-                    href="https://themeforest.net/item/pulse-music-audio-radio-template/16798243?ref=flatfull"
-                    class="btn btn-xs rounded danger pull-right">BUY</a> <strong>Theme Switcher</strong></div>
+                    href="#"
+                    class="btn btn-xs rounded danger pull-right"></a> <strong>Theme Switcher</strong></div>
             <div class="box-divider"></div>
             <div class="box-body"><p id="settingLayout" class="hidden-md-down"><label class="md-check m-y-xs"
                                                                                       data-target="folded"><input
@@ -1170,7 +379,7 @@
                                                 <div class="item-info">
                                                     <div class="item-title text-ellipsis"><a href="{{url('artist-detail')}}">Joe
                                                             Holmes</a>
-                                                        <div class="text-sm text-muted">24 songs</div>
+                                                        <div class="text-sm text-muted">24 episodes</div>
                                                     </div>
                                                 </div>
                                             </div>

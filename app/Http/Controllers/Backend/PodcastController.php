@@ -44,7 +44,7 @@ class PodcastController extends Controller
             'description' => 'required|string',
             'cover_image' => 'required|string',
             'category_id'=> 'required|exists:categories,id',
-            'file' => 'required|mimetypes:video/mp4|max:50000', // Adjust the maximum file size as needed
+            'file' => 'required|mimetypes:video/mp4|max:500000', // Adjust the maximum file size as needed
 
         ]);
 
